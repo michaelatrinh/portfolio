@@ -1,22 +1,24 @@
 import React from 'react'
 import Link from 'next/link';
-import styles from '@/styles/home.module.css';
+import css from '@/styles/home/home.module.css';
+import scss from '@/styles/home/home.module.scss';
 
 // components
-import ExpandingContentBar from '@/components/expandingBar'
+import ExpandingContentBar from '@/components/expandingBar';
+import WelcomeMsg from '@/components/welcomeMsg';
 
 export default function Home() {
   return (
     <main>
       {/* expanding bar when webpage loads */}
-      <div className={styles.expandBarCont}>
+      <div className={css.expandBarCont}>
         <ExpandingContentBar />
       </div>
       {/* welcome homepage msg & nav bar */}
-      <section className={`${styles.contentCont} ${styles.contentContAnimate}`}>
+      <section className={`${css.contentCont} ${css.contentContAnimate}`}>
         {/* nav bar */}
-        <header className={styles.header}>
-          <nav className={styles.navColumn}>
+        <header className={css.header}>
+          <nav className={css.navColumn}>
             <Link href="/">
               <a>Home</a>
             </Link>
@@ -29,12 +31,9 @@ export default function Home() {
           </nav>
         </header>  
         {/* welcome msg */}
-        <div className={styles.welcomeCont}>
-          <h1>Hi, I'm Michael</h1>
-          <h2>Front end developer</h2>
-        </div>
+        <WelcomeMsg />
       </section>
-      <section className={styles.realContentCont}>
+      <section className={css.realContentCont}>
   
       </section>
     

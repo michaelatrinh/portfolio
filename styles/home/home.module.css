@@ -24,7 +24,7 @@
 }
 
 .navColumn:hover a {
-  /* filter: blur(0.15rem); */
+  /* filter: blur(0.05rem); */
   transform: scale(1);
 }
 
@@ -174,5 +174,17 @@
   }
   to {
     max-width: 100%;
+  }
+}
+
+#period {
+  opacity: 0;
+
+  animation: blink 1s steps(2, jump-none) infinite;
+}
+
+@keyframes blink {
+  to {
+    opacity: 1;
   }
 }

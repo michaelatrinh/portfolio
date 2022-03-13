@@ -7,6 +7,7 @@
   --fadeNavIn-animation-time: 1000ms;
   /* colours */
   --content-light-colour: #FFFFFF;
+  --content-highlight-colour: deepskyblue;
 }
 
 html,
@@ -51,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-  color: deepskyblue;
+  color: var(--content-highlight-colour);
 }
 
 nav {
