@@ -33,10 +33,6 @@ export default function Home() {
         {/* welcome msg */}
         <WelcomeMsg />
       </section>
-      <section className={css.realContentCont}>
-  
-      </section>
-    
     </main>
   )
 }
