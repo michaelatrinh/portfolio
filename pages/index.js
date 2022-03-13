@@ -16,7 +16,7 @@ export default function Home() {
       <section className={`${styles.contentCont} ${styles.contentContAnimate}`}>
         {/* nav bar */}
         <header className={styles.header}>
-          <nav>
+          <nav className={styles.navColumn}>
             <Link href="/">
               <a>Home</a>
             </Link>

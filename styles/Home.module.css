@@ -23,6 +23,16 @@
   animation: fadeNavIn var(--fadeNavIn-animation-time) 2000ms forwards;
 }
 
+.navColumn:hover a {
+  /* filter: blur(0.15rem); */
+  transform: scale(1);
+}
+
+.navColumn:hover a:hover {
+  /* filter: blur(0); */
+  transform: scale(1.1);
+}
+
 @keyframes fadeNavIn {
   from {
     opacity: 0;
@@ -130,9 +140,14 @@
   
   margin: 0;
 
-  opacity: 0;
+  width: auto;
+  max-width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
 
-  animation: fadeHelloIn var(--fadeHelloIn-animation-time) 2000ms forwards;
+  opacity: 1;
+
+  animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2000ms forwards;
 }
 
 .welcomeCont h2 {
@@ -143,16 +158,21 @@
   
   margin: 0;
 
-  opacity: 0;
+  width: auto;
+  max-width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
 
-  animation: fadeHelloIn var(--fadeHelloIn-animation-time) 2000ms forwards;
+  opacity: 1;
+
+  animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2500ms forwards;
 }
 
 @keyframes fadeHelloIn {
   from {
-    opacity: 0;
+    max-width: 0%;
   }
   to {
-    opacity: 1;
+    max-width: 100%;
   }
 }

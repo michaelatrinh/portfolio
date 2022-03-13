@@ -3,7 +3,7 @@
   --expand-animation-time: 1000ms;
   --reallyExpand-animation-time: 500ms;
   --revealHomeContent-animation-time: 1500ms;
-  --fadeHelloIn-animation-time: 1000ms;
+  --fadeHelloIn-animation-time: 1500ms;
   --fadeNavIn-animation-time: 1000ms;
   /* colours */
   --content-light-colour: #FFFFFF;
@@ -24,6 +24,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   overflow: hidden;
+
+  scroll-behavior: smooth;
 }
 
 main {
