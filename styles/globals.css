@@ -1,9 +1,36 @@
+:root {
+  /* animation timings */
+  --expand-animation-time: 1000ms;
+  --reallyExpand-animation-time: 500ms;
+  --revealHomeContent-animation-time: 1500ms;
+  /* colours */
+  --content-light-colour: #FFFFFF;
+}
+
 html,
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 a {
@@ -11,6 +38,25 @@ a {
   text-decoration: none;
 }
 
+nav a {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--content-light-colour);
+  transition: 0.5s;
+}
+
+nav a:hover {
+  color: deepskyblue;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  max-width: 6rem;
+}
+
 * {
   box-sizing: border-box;
 }
+
