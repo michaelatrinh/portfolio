@@ -3,6 +3,8 @@
   --expand-animation-time: 1000ms;
   --reallyExpand-animation-time: 500ms;
   --revealHomeContent-animation-time: 1500ms;
+  --fadeHelloIn-animation-time: 1000ms;
+  --fadeNavIn-animation-time: 1000ms;
   /* colours */
   --content-light-colour: #FFFFFF;
 }
