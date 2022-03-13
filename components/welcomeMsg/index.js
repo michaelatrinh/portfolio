@@ -11,7 +11,8 @@ export default function welcomeMsg(){
         <span aria-hidden="true">,</span>
         <span dangerouslySetInnerHTML={{__html: "&nbsp"}} />
         <span aria-hidden="true">I</span>
-        <span aria-hidden="true">'</span>
+        {/* <span aria-hidden="true">'</span> */}
+        <span dangerouslySetInnerHTML={{__html: "&apos"}} />
         <span aria-hidden="true">m</span>
         <span dangerouslySetInnerHTML={{__html: "&nbsp"}} />
         <span aria-hidden="true">M</span>
