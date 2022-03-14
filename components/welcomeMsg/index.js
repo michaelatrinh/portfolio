@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import css from '@/components/welcomeMsg/style.module.css';
+import scss from '@/components/welcomeMsg/style.module.scss';
 
 export default function welcomeMsg(){
   return (
-    <div className={css.welcomeCont}>
+    <div className={scss.welcomeCont}>
       {/* <h1>Hi, I'm Michael</h1> */}
       <h1 aria-label='Text'>
         <span aria-hidden="true">H</span>
@@ -11,12 +11,14 @@ export default function welcomeMsg(){
         <span aria-hidden="true">,</span>
         <span dangerouslySetInnerHTML={{__html: "&nbsp"}} />
         <span aria-hidden="true">I</span>
-        {/* <span aria-hidden="true">'</span> */}
         <span dangerouslySetInnerHTML={{__html: "&#39"}} />
         <span aria-hidden="true">m</span>
         <span dangerouslySetInnerHTML={{__html: "&nbsp"}} />
         <span aria-hidden="true">M</span>
-        <span aria-hidden="true">i</span>
+        <div className={scss.iWrapper}>
+          <span aria-hidden="true" className={`${scss.i} ${scss.bounce}`}>.</span>
+          <span aria-hidden="true" className={scss.i}>ı</span>
+        </div>
         <span aria-hidden="true">c</span>
         <span aria-hidden="true">h</span>
         <span aria-hidden="true">a</span>
@@ -43,7 +45,7 @@ export default function welcomeMsg(){
         <span aria-hidden="true">p</span>
         <span aria-hidden="true">e</span>
         <span aria-hidden="true">r</span>
-        <span aria-hidden="true" id={css.period}>.</span>
+        <span aria-hidden="true" id={scss.period}>.</span>
       </h2>
     </div>
   )

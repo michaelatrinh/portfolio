@@ -29,7 +29,7 @@
 
     background-color: $body-bg-colour;
   
-    animation: expand var(--expand-animation-time);
+    animation: expandX var(--expand-animation-time);
     animation-fill-mode: forwards;
   }
 
@@ -43,8 +43,7 @@
   
     background-color: $body-bg-colour;
   
-    animation: reallyExpand var(--reallyExpand-animation-time) var(--expand-animation-time);
-    animation-fill-mode: forwards;
+    animation: expandY var(--reallyExpand-animation-time) var(--expand-animation-time) forwards;
   }
 }
 
@@ -56,7 +55,7 @@
   }
 }
 
-@keyframes expand {
+@keyframes expandX {
   100% {
     left: -999%;
     right: -999%;
@@ -65,7 +64,7 @@
   }
 }
 
-@keyframes reallyExpand {
+@keyframes expandY {
   1% {
     left: -998%;
     right: -998%;
@@ -78,3 +77,21 @@
     right: -999%;
   }
 }
+
+// @keyframes bgGradient { 
+//   0% {
+//     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+//     background-size: 400% 400%;
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+//     background-size: 400% 400%;
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+//     background-size: 400% 400%;
+//     background-position: 0% 50%;
+//   }
+// }

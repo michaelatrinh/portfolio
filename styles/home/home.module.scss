@@ -1,18 +1,10 @@
 @use "../variables.scss";
 @use "../partials.scss";
+@use "@/styles/mixins.scss";
 
 @import "../variables.scss";
 @import "../partials.scss";
-
-@mixin contentContPsuedo {
-  content: "";
-  display: none;
-  position: absolute;
-
-  background-color: $body-bg-colour;
-
-  z-index: 1;
-}
+@import "@/styles/mixins.scss";
 
 .expandBarCont {
   @include flexCentering();
@@ -23,7 +15,6 @@
 }
 
 /* HEADER ============================================= */
-
 .header {
   position: fixed;
   inset: 5rem;
@@ -45,6 +36,10 @@
 }
 
 /* CONTENT BORDER ANIMATION =========================== */
+.homeWrapper {
+  @include fillViewport();
+  @include flexCentering();
+}
 
 .contentCont {
   @include flexCentering();
@@ -76,8 +71,7 @@
     width: 0vw;
     height: 90vh;
   
-    animation: revealHomeContentX var(--revealHomeContent-animation-time) 1500ms;
-    animation-fill-mode: forwards;
+    animation: revealHomeContentX var(--revealHomeContent-animation-time) 1500ms forwards, bgGradientInitX 5s 3.5s ease forwards, bgGradientContinueX 15s 10s ease infinite;
   }
 }
 
@@ -103,6 +97,32 @@
   }
 }
 
+// animation for gradient below
+
+// @keyframes bgGradientInitX {
+//   from {
+//     background-color: $body-bg-colour;
+//   }
+//   to {
+//     // background: linear-gradient(-45deg, #08090C, #101218, #181C25, #202531);
+//     background: linear-gradient(-45deg, $body-bg-colour, #101218, #181C25, #202531);
+//     background-size: 400% 400%;
+//     background-position: 0% 50%;
+//   }
+// }
+
+// @keyframes bgGradientContinueX {
+//   0% {
+//     background-position: 0% 50%;
+//   }  
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
+
 /* CONTENT BORDER CONTAINER end ======================== */
 
 /* WELCOME CONT MSG ==================================== */
@@ -116,42 +136,30 @@
   transition: 2s;
 
   z-index: 2;
-}
 
-.welcomeCont h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 4rem;
-  font-weight: 200;
-  color: var(--content-light-colour);
-  
-  margin: 0;
+  h1 {
+    @include noMargins();
+    @include hiddenText();
 
-  width: auto;
-  max-width: 0%;
-  overflow: hidden;
-  white-space: nowrap;
+    font-family: $primary-font;
+    font-size: 4rem;
+    font-weight: 200;
+    color: $content-light-colour;
 
-  opacity: 1;
+    animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2000ms forwards;
+  }
 
-  animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2000ms forwards;
-}
+  h2 {
+    @include noMargins();
+    @include hiddenText();
 
-.welcomeCont h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  font-weight: 200;
-  color: var(--content-light-colour);
-  
-  margin: 0;
+    font-family: $primary-font;
+    font-size: 2rem;
+    font-weight: 200;
+    color: $content-light-colour;
 
-  width: auto;
-  max-width: 0%;
-  overflow: hidden;
-  white-space: nowrap;
-
-  opacity: 1;
-
-  animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2500ms forwards;
+    animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2500ms forwards;
+  }
 }
 
 @keyframes fadeHelloIn {
@@ -173,4 +181,10 @@
   to {
     opacity: 1;
   }
+}
+
+/* WORKS SECTION =================================== */
+.worksCont {
+  @include fillViewport();
+  @include flexCentering();
 }

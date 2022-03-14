@@ -1,9 +1,11 @@
 /*! @use for future deprecation by sass */
 @use "variables.scss";
 @use "_partials.scss";
+@use "@/styles/mixins.scss";
 
 @import "variables.scss";
 @import "_partials.scss";
+@import "@/styles/mixins.scss";
 
 /* :root for css */
 :root {
@@ -20,22 +22,24 @@
 
 html,
 body {
-  @include fillViewport;
-  @include flexCentering;
+  @include fillViewport();
+  @include flexCentering();
+  @include noMargins();
 
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  overflow: hidden;
+  overflow-x: hidden;
 
   scroll-behavior: smooth;
+
+  animation: bgChange 100ms 1500ms forwards;
 }
 
 main {
-  @include fillViewport;
-  @include flexCentering;
+  @include fillViewport();
+  @include flexCentering();
+  flex-direction: column;
 }
 
 a {
@@ -67,3 +71,8 @@ nav {
   box-sizing: border-box;
 }
 
+@keyframes bgChange {
+  to {
+    background-color: $body-bg-colour;
+  }
+}

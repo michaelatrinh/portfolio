@@ -1,0 +1,46 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+
+
+@mixin noMargins() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin fillViewport() {
+  min-width: $vp-width;
+  min-height: $vp-height;
+}
+
+@mixin flexCentering() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin welcomeMsgStyles {
+  width: auto;
+  max-width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin hiddenText {
+  width: auto;
+  max-width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin contentContPsuedo {
+  content: "";
+  display: none;
+  position: absolute;
+
+  background-color: $body-bg-colour;
+
+  z-index: 1;
+}

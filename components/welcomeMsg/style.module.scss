@@ -1,0 +1,104 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.welcomeCont {
+  @include flexCentering();
+
+  flex-direction: column;
+  z-index: 2;
+
+  h1 {
+    @include noMargins();
+    @include welcomeMsgStyles();
+
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+    color: var(--content-light-colour);
+
+    animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2000ms forwards;
+
+    .iWrapper {
+      display: inline-block;
+    }
+
+    .i {
+      display: block;
+      line-height: 0.66;
+      margin: 0;
+    }
+    
+    .bounce {
+      padding-left: 0.13rem;
+      animation: bounce 0.4s 3.5s infinite alternate;
+    }
+  }
+
+  h2 {
+    @include noMargins();
+    @include welcomeMsgStyles();
+
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--content-light-colour);
+
+    animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2500ms forwards;
+  }
+}
+
+.welcomeCont h1 *,
+.welcomeCont h2 * {
+  display: inline-block;
+}
+
+.welcomeCont h1:hover *,
+.welcomeCont h2:hover * {
+  cursor: default;
+}
+
+.welcomeCont h1 *:hover,
+.welcomeCont h2 *:hover {
+  cursor: default;
+  color: var(--content-highlight-colour);
+  /* font-size: calc(100% + 0.5rem); */
+  transform: scale(1.1) perspective(1rem);
+  transition: color 100ms, transform 100ms;
+}
+
+@keyframes fadeHelloIn {
+  from {
+    max-width: 0%;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+#period {
+  opacity: 1;
+
+  animation: blink 0.805s 3.5s steps(2, jump-none) infinite;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -0.75rem, 0);
+  }
+}
+
