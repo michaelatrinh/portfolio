@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <main>
       {/* expanding bar when webpage loads */}
-      <div className={css.expandBarCont}>
+      <div className={scss.expandBarCont}>
         <ExpandingContentBar />
       </div>
       {/* welcome homepage msg & nav bar */}
-      <section className={`${css.contentCont} ${css.contentContAnimate}`}>
+      <section className={`${scss.contentCont} ${scss.contentContAnimate}`}>
         {/* nav bar */}
-        <header className={css.header}>
-          <nav className={css.navColumn}>
+        <header className={scss.header}>
+          <nav>
             <Link href="/">
               <a>Home</a>
             </Link>

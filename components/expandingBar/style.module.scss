@@ -1,0 +1,80 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials";
+
+@import "@/styles/variables.scss";
+@import "@/styles/_partials.scss";
+
+@mixin barPsuedo {
+  content: "";
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+
+.bar {
+  position: relative;
+
+  width: 5vw;
+  height: 5vh;
+  
+  background-color: $body-bg-colour;
+  border: none;
+  border-radius: 1em;
+  z-index: -1;
+
+  &::before {
+    @include barPsuedo();
+
+    border-radius: 1em;
+
+    background-color: $body-bg-colour;
+  
+    animation: expand var(--expand-animation-time);
+    animation-fill-mode: forwards;
+  }
+
+  &::after {
+    @include barPsuedo();
+
+    left: -1%;
+    right: -1%;
+    top: 40%;
+    bottom: 40%;
+  
+    background-color: $body-bg-colour;
+  
+    animation: reallyExpand var(--reallyExpand-animation-time) var(--expand-animation-time);
+    animation-fill-mode: forwards;
+  }
+}
+
+.bar.animating {
+  background-color: transparent;
+
+  &::before, &::after {
+    display: block;
+  }
+}
+
+@keyframes expand {
+  100% {
+    left: -999%;
+    right: -999%;
+    top: 40%;
+    bottom: 40%;
+  }
+}
+
+@keyframes reallyExpand {
+  1% {
+    left: -998%;
+    right: -998%;
+  }
+
+  100% {
+    top: -999%;
+    bottom: -999%;
+    left: -999%;
+    right: -999%;
+  }
+}

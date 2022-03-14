@@ -1,3 +1,11 @@
+/*! @use for future deprecation by sass */
+@use "variables.scss";
+@use "_partials.scss";
+
+@import "variables.scss";
+@import "_partials.scss";
+
+/* :root for css */
 :root {
   /* animation timings */
   --expand-animation-time: 1000ms;
@@ -12,12 +20,8 @@
 
 html,
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-width: 100vw;
-  min-height: 100vh;
+  @include fillViewport;
+  @include flexCentering;
 
   padding: 0;
   margin: 0;
@@ -30,12 +34,8 @@ body {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-width: 100vw;
-  min-height: 100vh;
+  @include fillViewport;
+  @include flexCentering;
 }
 
 a {
@@ -43,22 +43,24 @@ a {
   text-decoration: none;
 }
 
-nav a {
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  font-weight: 200;
-  color: var(--content-light-colour);
-  transition: 0.5s;
-}
-
-nav a:hover {
-  color: var(--content-highlight-colour);
-}
-
 nav {
   display: flex;
   flex-direction: column;
   max-width: 6rem;
+
+  a {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    color: $content-light-colour;
+    transition: 0.5s;
+  
+    &:hover {
+      color: $content-light-colour-highlight;
+
+      transform: scale(1.1);
+    }
+  }
 }
 
 * {

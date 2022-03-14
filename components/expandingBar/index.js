@@ -1,10 +1,8 @@
 import React from 'react';
-import styles from './style.module.css';
+import scss from './style.module.scss';
 
-export default function expandingBar({ children }){
+export default function expandingBar(){
   return (
-    <div className={`${styles.bar} ${styles.animating}`}>
-      { children }
-    </div>
+    <div className={`${scss.bar} ${scss.animating}`} />
   )
 }
