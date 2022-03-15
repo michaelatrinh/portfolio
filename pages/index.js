@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Link from 'next/link';
 import css from '@/styles/home/home.module.css';
 import scss from '@/styles/home/home.module.scss';
@@ -6,8 +6,17 @@ import scss from '@/styles/home/home.module.scss';
 // components
 import ExpandingContentBar from '@/components/expandingBar';
 import WelcomeMsg from '@/components/welcomeMsg';
+import ScrollToView from '@/components/scrollToView';
 
 export default function Home() {
+  const worksSectionRef = useRef();
+
+  const handleScrollDownClick = () => {
+    worksSectionRef.current.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <main>
       <div className={scss.homeWrapper}>
@@ -15,7 +24,6 @@ export default function Home() {
         <div className={scss.expandBarCont}>
           <ExpandingContentBar />
         </div>
-
         <section className={`${scss.contentCont} ${scss.contentContAnimate}`}>
           {/* nav bar */}
           <header className={scss.header}>
@@ -33,12 +41,13 @@ export default function Home() {
           </header>  
           {/* welcome msg */}
           <WelcomeMsg />
+          <div className={scss.scrollIcon}>
+            <ScrollToView onScrollDownClick={handleScrollDownClick}/>
+          </div>
         </section>
       </div>
-      {/* welcome homepage msg & nav bar */}
-      
       {/* works */}
-      <section className={scss.worksCont}>
+      <section className={scss.worksCont} ref={worksSectionRef}>
         
       </section>
     </main>

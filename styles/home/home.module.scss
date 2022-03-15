@@ -73,6 +73,12 @@
   
     animation: revealHomeContentX var(--revealHomeContent-animation-time) 1500ms forwards, bgGradientInitX 5s 3.5s ease forwards, bgGradientContinueX 15s 10s ease infinite;
   }
+
+  .scrollIcon {
+    position: absolute;
+    z-index: 2;
+    bottom: 1rem;
+  }
 }
 
 .contentCont.contentContAnimate {
@@ -124,64 +130,6 @@
 // }
 
 /* CONTENT BORDER CONTAINER end ======================== */
-
-/* WELCOME CONT MSG ==================================== */
-
-.welcomeCont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  transition: 2s;
-
-  z-index: 2;
-
-  h1 {
-    @include noMargins();
-    @include hiddenText();
-
-    font-family: $primary-font;
-    font-size: 4rem;
-    font-weight: 200;
-    color: $content-light-colour;
-
-    animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2000ms forwards;
-  }
-
-  h2 {
-    @include noMargins();
-    @include hiddenText();
-
-    font-family: $primary-font;
-    font-size: 2rem;
-    font-weight: 200;
-    color: $content-light-colour;
-
-    animation: fadeHelloIn var(--fadeHelloIn-animation-time) ease-out 2500ms forwards;
-  }
-}
-
-@keyframes fadeHelloIn {
-  from {
-    max-width: 0%;
-  }
-  to {
-    max-width: 100%;
-  }
-}
-
-#period {
-  opacity: 0;
-
-  animation: blink 1s steps(2, jump-none) infinite;
-}
-
-@keyframes blink {
-  to {
-    opacity: 1;
-  }
-}
 
 /* WORKS SECTION =================================== */
 .worksCont {
