@@ -1,0 +1,21 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.container {
+  @include flexCentering();
+
+  z-index: 2;
+
+  h1 {
+    font-family: $primary-font;
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: $content-light-colour;
+
+  }
+}
