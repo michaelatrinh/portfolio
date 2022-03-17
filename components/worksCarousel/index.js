@@ -1,4 +1,4 @@
-import react, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import scss from './worksCarousel.module.scss';
 
@@ -24,7 +24,7 @@ export default function worksCarousel(){
   const BCard = useRef();
   const CCard = useRef();
 
-  const handleA = () => {
+  const HandleA = () => {
     // A card moves from LEFT(start) to MIDDLE
     if(AStart){
       ACard.current.classList.remove(scss.prev);
@@ -44,9 +44,6 @@ export default function worksCarousel(){
 
       setCMovedToLeft(true);
       setCStart(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
     
     // A card moves from RIGHT to MIDDLE
@@ -68,9 +65,6 @@ export default function worksCarousel(){
 
       setCMovedToLeft(true);
       setCMovedToMiddle(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
 
     if(AMovedToLeft){
@@ -91,15 +85,12 @@ export default function worksCarousel(){
 
       setCMovedToLeft(true);
       setCmovedToRight(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
 
     return;
   }
 
-  const handleB = () => {
+  const HandleB = () => {
     // B card moves from RIGHT to MIDDLE
     if(BmovedToRight){
       ACard.current.classList.remove(scss.active);
@@ -119,9 +110,6 @@ export default function worksCarousel(){
 
       setCmovedToRight(true);
       setCMovedToLeft(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
 
     if(BMovedToLeft){
@@ -142,15 +130,12 @@ export default function worksCarousel(){
 
       setCmovedToRight(true);
       setCMovedToMiddle(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
 
     return;
   }
 
-  const handleC = () => {
+  const HandleC = () => {
     // C card moves from RIGHT(start) to MIDDLE
     if(CStart){
       ACard.current.classList.remove(scss.prev);
@@ -170,9 +155,6 @@ export default function worksCarousel(){
 
       setCMovedToMiddle(true);
       setCStart(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
 
     // C card moves from RIGHT to MIDDLE
@@ -195,9 +177,6 @@ export default function worksCarousel(){
 
       setCMovedToMiddle(true);
       setCStart(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
 
     // C card moves from LEFT to MIDDLE
@@ -219,15 +198,12 @@ export default function worksCarousel(){
 
       setCMovedToMiddle(true);
       setCMovedToLeft(false);
-
-      setCounter(c => c + 1);
-      console.log("COUNTER: " + counter);
     }
 
     return;
   }
 
-  const handleProjectClick = () => {
+  const HandleProjectClick = () => {
     if(BStart) return router.push("/works/reshare");
     
     if(AmovedToMiddle) return router.push("/works/cleantable");
@@ -284,26 +260,26 @@ export default function worksCarousel(){
         {CmovedToMiddle ? cinemagicText() : ""}
       </div>
       <ul className={scss.list}>
-        <li className={scss.prev} ref={ACard} onClick={ handleA }>
+        <li className={scss.prev} ref={ACard} onClick={ HandleA }>
           <img 
             src="cleantableLogo2.png"
             className={scss.images}
           />
         </li>
-        <li className={scss.active} ref={BCard} onClick={ handleB }>
+        <li className={scss.active} ref={BCard} onClick={ HandleB }>
           <img
             src="reshareLogo.png" 
             className={scss.images}
           />
         </li>
-        <li className={scss.next} ref={CCard} onClick={ handleC }>
+        <li className={scss.next} ref={CCard} onClick={ HandleC }>
           <img 
             src="cinemagicLogo.png"
             className={scss.images}
           />
         </li>
       </ul>
-      <div className={scss.project} onClick={ handleProjectClick } />
+      <div className={scss.project} onClick={ HandleProjectClick } />
     </div>
   )
 }
