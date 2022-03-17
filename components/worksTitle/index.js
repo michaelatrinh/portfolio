@@ -1,5 +1,5 @@
 import React from 'react';
-import scss from './style.module.scss';
+import scss from './worksTitle.module.scss';
 
 export default function worksTitle(){
   return (
