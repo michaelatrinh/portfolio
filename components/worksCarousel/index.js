@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import react, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import scss from './worksCarousel.module.scss';
 
