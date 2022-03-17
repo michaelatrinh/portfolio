@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Quizdo(){
+export default function Cinemagic(){
   return (
     <>
-      quizdo
+      Cinemagic
     </>
   )
 }

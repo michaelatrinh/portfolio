@@ -1,12 +1,15 @@
 import React, { useRef } from 'react'
 import Link from 'next/link';
-import css from '@/styles/home/home.module.css';
 import scss from '@/styles/home/home.module.scss';
 
 // components
+import NavBar from '@/components/navBar';
 import ExpandingContentBar from '@/components/expandingBar';
 import WelcomeMsg from '@/components/welcomeMsg';
 import ScrollToView from '@/components/scrollToView';
+import WorksTitle from '@/components/worksTitle';
+import WorksSwiper from '@/components/worksSwiper';
+import WorksCarousel from '@/components/worksCarousel';
 
 export default function Home() {
   const worksSectionRef = useRef();
@@ -19,14 +22,15 @@ export default function Home() {
 
   return (
     <main>
-      <div className={scss.homeWrapper}>
+      {/* home */}
+      <section className={scss.homeWrapper}>
         {/* expanding bar when webpage loads */}
         <div className={scss.expandBarCont}>
           <ExpandingContentBar />
         </div>
         <section className={`${scss.contentCont} ${scss.contentContAnimate}`}>
           {/* nav bar */}
-          <header className={scss.header}>
+          {/* <header className={scss.header}>
             <nav>
               <Link href="/">
                 <a>Home</a>
@@ -38,17 +42,24 @@ export default function Home() {
                 <a>About</a>
               </Link>
             </nav>
-          </header>  
+          </header>   */}
+          <NavBar />
           {/* welcome msg */}
           <WelcomeMsg />
           <div className={scss.scrollIcon}>
             <ScrollToView onScrollDownClick={handleScrollDownClick}/>
           </div>
         </section>
-      </div>
+      </section>
       {/* works */}
-      <section className={scss.worksCont} ref={worksSectionRef}>
-        
+      <section className={scss.worksWrapper}>
+        <section className={`${scss.worksCont} ${scss.worksContAnimate}`} ref={worksSectionRef}>
+          <div className={scss.worksTitle}>
+            <WorksTitle />
+          </div>
+          {/* <WorksSwiper /> */}
+          <WorksCarousel />
+        </section>
       </section>
     </main>
   )

@@ -1,0 +1,31 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.header {
+  position: fixed;
+  inset: 5rem;
+  
+  opacity: 0;
+
+  z-index: 1;
+
+  animation: fadeNavIn var(--fadeNavIn-animation-time) 2000ms forwards;
+
+  nav {
+    z-index: 99;
+  }
+}
+
+@keyframes fadeNavIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

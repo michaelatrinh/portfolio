@@ -1,9 +1,9 @@
-@use "../variables.scss";
-@use "../partials.scss";
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
 @use "@/styles/mixins.scss";
 
-@import "../variables.scss";
-@import "../partials.scss";
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
 @import "@/styles/mixins.scss";
 
 .expandBarCont {
@@ -132,7 +132,55 @@
 /* CONTENT BORDER CONTAINER end ======================== */
 
 /* WORKS SECTION =================================== */
+.worksWrapper {
+  @include fillViewport();
+  @include flexCentering();
+}
+
 .worksCont {
   @include fillViewport();
   @include flexCentering();
+  
+  flex-direction: column;
+  position: relative;
+
+  min-width: 95vw;
+  min-height: 90vh;
+  max-width: 95vw;
+  max-height: 90vh;
+  
+  border: 0.33rem solid white;
+
+  &::before {
+    @include contentContPsuedo();
+
+    width: 95vw;
+    height: 80vh;
+
+    // animation: revealHomeContentY var(--revealHomeContent-animation-time) 1500ms;
+    // animation-fill-mode: forwards;
+  }
+
+  &::after {
+    @include contentContPsuedo();
+
+    width: 90vw;
+    height: 90vh;
+  
+    // animation: revealHomeContentX var(--revealHomeContent-animation-time) 1500ms forwards, bgGradientInitX 5s 3.5s ease forwards, bgGradientContinueX 15s 10s ease infinite;
+  }
+
+  .worksTitle {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.worksCont.worksContAnimate {
+  background-color: transparent;
+
+  &::before, &::after {
+    display: block;
+  }
 }
