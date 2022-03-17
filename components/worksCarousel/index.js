@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import scss from './worksCarousel.module.scss';
 
-export default function worksCarousel(){
+export default function WorksCarousel(){
   const router = useRouter();
 
   const [AStart, setAStart] = useState(true);
