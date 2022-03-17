@@ -10,9 +10,11 @@
   position: fixed;
   inset: 5rem;
   
-  opacity: 0;
+  width: 6rem;
+  height: 9.5rem;
 
   z-index: 1;
+  opacity: 0;
 
   animation: fadeNavIn var(--fadeNavIn-animation-time) 2000ms forwards;
 
