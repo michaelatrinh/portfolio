@@ -135,6 +135,11 @@
 .worksWrapper {
   @include fillViewport();
   @include flexCentering();
+
+  z-index: 0;
+  opacity: 0;
+
+  animation: revealWorksCont 1.5s 1.5s forwards;
 }
 
 .worksCont {
@@ -172,7 +177,7 @@
 
   .worksTitle {
     position: absolute;
-    top: 0;
+    top: -2rem;
     z-index: 2;
   }
 }
@@ -182,5 +187,14 @@
 
   &::before, &::after {
     display: block;
+  }
+}
+
+@keyframes revealWorksCont {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

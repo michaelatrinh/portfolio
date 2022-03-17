@@ -57,6 +57,19 @@
       p {
         opacity: 1;
       }
+
+      .heading {
+        cursor: pointer;
+        // text-decoration: underline;
+        // text-decoration-color: $body-bg-colour;
+        transition: 0.5s;
+
+        // &:hover {
+        //   // transform: scale(1.05);
+        //   // color: $content-light-colour-highlight;
+        //   // text-decoration-color: $content-light-colour-highlight;
+        // }
+      }
     }
   }
   
@@ -117,7 +130,6 @@
     }
   }
   
-
   .project {
     width: 25rem;
     height: 25rem;

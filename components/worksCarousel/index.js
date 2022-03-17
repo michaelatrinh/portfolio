@@ -215,14 +215,24 @@ export default function WorksCarousel(){
     if(BStart){
       return (
         <div className={scss.activeText}>
-          <h2>Reshare</h2>
+          <h2 
+            onClick={() => router.push("/works/reshare")}
+            className={scss.heading}
+          >
+            Reshare
+          </h2>
           <p>A school mobile application project that serves as a marketplace to resolve and reduce the amount of food waste caused by grocery stores in the metro Vancouver region.</p>
         </div>
       )
     } else if(BmovedToMiddle){
       return (
         <div className={scss.activeText}>
-          <h2>Reshare</h2>
+          <h2 
+            onClick={() => router.push("/works/reshare")}
+            className={scss.heading}
+          >
+            Reshare
+          </h2>
           <p>A school mobile application project that serves as a marketplace to resolve and reduce the amount of food waste caused by grocery stores in the metro Vancouver region.</p>
         </div>
       )
@@ -233,7 +243,12 @@ export default function WorksCarousel(){
     if(AmovedToMiddle){
       return (
         <div className={scss.activeText}>
-          <h2>Clean Table</h2>
+          <h2 
+            onClick={() => router.push("/works/cleantable")}
+            className={scss.heading}
+          >
+            Clean Table
+          </h2>
           <p>A school web application project that aims to provide a solution to the increasing amount of food wastes found in landfills, by offering users a way to track their ingredients left within their pantry and create recipes utilizing their near-expiring produce.</p>
         </div>
       )
@@ -244,7 +259,12 @@ export default function WorksCarousel(){
     if(CmovedToMiddle){
       return (
         <div className={scss.activeText}>
-          <h2>Cinemagic</h2>
+          <h2 
+            onClick={() => router.push("/works/cinemagic")}
+            className={scss.heading}
+          >
+            Cinemagic
+          </h2>
           <p>A school web application project that provides users with movie recommendations based on 25 years worth of data collected from IMDB.</p>
         </div>
       )
