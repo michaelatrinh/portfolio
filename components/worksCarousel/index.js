@@ -5,9 +5,6 @@ import scss from './worksCarousel.module.scss';
 export default function worksCarousel(){
   const router = useRouter();
 
-  var counterInitState = 0;
-  const [counter, setCounter] = useState(counterInitState);
-
   const [AStart, setAStart] = useState(true);
   const [AMovedToLeft, setAMovedToLeft] = useState(false);
   const [AmovedToMiddle, setAMovedToMiddle] = useState(false);
@@ -98,6 +95,8 @@ export default function worksCarousel(){
       setCounter(c => c + 1);
       console.log("COUNTER: " + counter);
     }
+
+    return;
   }
 
   const handleB = () => {
@@ -147,6 +146,8 @@ export default function worksCarousel(){
       setCounter(c => c + 1);
       console.log("COUNTER: " + counter);
     }
+
+    return;
   }
 
   const handleC = () => {
@@ -222,6 +223,8 @@ export default function worksCarousel(){
       setCounter(c => c + 1);
       console.log("COUNTER: " + counter);
     }
+
+    return;
   }
 
   const handleProjectClick = () => {
@@ -232,33 +235,17 @@ export default function worksCarousel(){
     if(CmovedToMiddle) return router.push("/works/cinemagic");
   }
 
-  var cleantableTextRef = useRef();
-  var reshareTextRef = useRef();
-  var cinemagicTextRef = useRef();
-
-  // useEffect(() => {
-  //   cleantableTextRef.current.animate({
-  //     opacity: [0, 1]
-  //   });
-  //   reshareTextRef.current.animate({
-  //     opacity: [0, 1]
-  //   });
-  //   cinemagicTextRef.current.animate({
-  //     opacity: [0, 1]
-  //   });
-  // }, [counter]);
-
   const reshareText = () => {
     if(BStart){
       return (
-        <div className={scss.activeText} ref={reshareTextRef}>
+        <div className={scss.activeText}>
           <h2>Reshare</h2>
           <p>A school mobile application project that serves as a marketplace to resolve and reduce the amount of food waste caused by grocery stores in the metro Vancouver region.</p>
         </div>
       )
     } else if(BmovedToMiddle){
       return (
-        <div className={scss.activeText} ref={reshareTextRef}>
+        <div className={scss.activeText}>
           <h2>Reshare</h2>
           <p>A school mobile application project that serves as a marketplace to resolve and reduce the amount of food waste caused by grocery stores in the metro Vancouver region.</p>
         </div>
@@ -269,7 +256,7 @@ export default function worksCarousel(){
   const cleantableText = () => {
     if(AmovedToMiddle){
       return (
-        <div className={scss.activeText} ref={cleantableTextRef}>
+        <div className={scss.activeText}>
           <h2>Clean Table</h2>
           <p>A school web application project that aims to provide a solution to the increasing amount of food wastes found in landfills, by offering users a way to track their ingredients left within their pantry and create recipes utilizing their near-expiring produce.</p>
         </div>
@@ -280,7 +267,7 @@ export default function worksCarousel(){
   const cinemagicText = () => {
     if(CmovedToMiddle){
       return (
-        <div className={scss.activeText} ref={cinemagicTextRef}>
+        <div className={scss.activeText}>
           <h2>Cinemagic</h2>
           <p>A school web application project that provides users with movie recommendations based on 25 years worth of data collected from IMDB.</p>
         </div>
