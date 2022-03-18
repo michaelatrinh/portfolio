@@ -265,7 +265,7 @@ export default function WorksCarousel(){
           >
             Cinemagic
           </h2>
-          <p>A school web application project that provides users with movie recommendations based on 25 years worth of data collected from IMDB.</p>
+          <p>A school web application project that provides users with movie recommendations based on data collected from IMDB.</p>
         </div>
       )
     }

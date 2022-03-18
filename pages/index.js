@@ -28,21 +28,13 @@ export default function Home() {
         <div className={scss.expandBarCont}>
           <ExpandingContentBar />
         </div>
+        {/* bg */}
+        <div className={scss.bg} />
+        {/* glass effect */}
+        <div className={scss.glass} />
+        {/* home content */}
         <section className={`${scss.contentCont} ${scss.contentContAnimate}`}>
           {/* nav bar */}
-          {/* <header className={scss.header}>
-            <nav>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-              <Link href="/works">
-                <a>Works</a>
-              </Link>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </nav>
-          </header>   */}
           <NavBar />
           {/* welcome msg */}
           <WelcomeMsg />

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import scss from '@/components/welcomeMsg/style.module.scss';
+import scss from '@/components/welcomeMsg/welcomeMsg.module.scss';
 
 export default function welcomeMsg(){
   return (
