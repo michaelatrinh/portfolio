@@ -45,6 +45,10 @@ export default function Home() {
       </section>
       {/* works */}
       <section className={scss.worksWrapper}>
+        {/* bg */}
+        <div className={scss.bg} />
+        {/* glass effect */}
+        <div className={scss.glass} />
         <section className={`${scss.worksCont} ${scss.worksContAnimate}`} ref={worksSectionRef}>
           <div className={scss.worksTitle}>
             <WorksTitle />
