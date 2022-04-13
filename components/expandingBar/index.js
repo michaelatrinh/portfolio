@@ -1,5 +1,5 @@
 import React from 'react';
-import scss from './style.module.scss';
+import scss from './expandingBar.module.scss';
 
 export default function expandingBar(){
   return (

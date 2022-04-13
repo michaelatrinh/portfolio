@@ -11,34 +11,42 @@
   @include fillViewport();
 
   position: absolute;
-  z-index: -1;
-}
-
-/* HEADER ============================================= */
-.header {
-  position: fixed;
-  inset: 5rem;
-  
-  opacity: 0;
-
-  z-index: 2;
-
-  animation: fadeNavIn var(--fadeNavIn-animation-time) 2000ms forwards;
-}
-
-@keyframes fadeNavIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  z-index: 1;
+  background: none;
 }
 
 /* CONTENT BORDER ANIMATION =========================== */
 .homeWrapper {
   @include fillViewport();
   @include flexCentering();
+
+  .glass {
+    position: absolute;
+    min-width: 95vw;
+    min-height: 90vh;
+    max-width: 95vw;
+    max-height: 90vh;
+    background: linear-gradient(-135deg, #415a77, #1b263b, #0d1b2a, $body-bg-colour);
+    background-size: 400% 400%;
+    filter: blur(0.75rem);
+    box-shadow: 0 0 1000px 0;
+    z-index: 1;
+    opacity: 0;
+
+    animation: showOpacity 1.5s 2s ease forwards, bgGradient 15s 2.5s ease infinite;
+  }
+
+  .bg {
+    @include fillViewport();
+
+    position: absolute;
+    background: linear-gradient(-135deg, #415a77, #1b263b, #0d1b2a, $body-bg-colour);
+    background-size: 400% 400%;
+    opacity: 0;
+    z-index: 1;
+    
+    animation: showOpacity 1.5s 2s ease forwards, bgGradient 15s 2.5s ease infinite;
+  }
 }
 
 .contentCont {
@@ -51,18 +59,35 @@
   max-width: 95vw;
   max-height: 90vh;
 
+  // background: linear-gradient(45deg, $body-bg-colour, #101218, #181C25, #202531);
+  // background: linear-gradient(-45deg, $body-bg-colour, #101218, #946635, #FD8922);
+  // background-size: 400% 400%;
+  // box-shadow: inset 0.1rem 0 1rem 0rem $body-bg-colour,
+  //             inset -0.1rem 0 1rem 0rem $body-bg-colour,
+  //             inset 0 0.1rem 1rem 0rem $body-bg-colour,
+  //             inset 0 -0.1rem 1rem 0rem $body-bg-colour;
+
   z-index: 1;
+  opacity: 0;
   
   border: 0.33rem solid white;
+
+  animation: showOpacity 500ms 1s ease forwards,
+              hideBorder 1s 2s ease forwards;
 
   &::before {
     @include contentContPsuedo();
 
     width: 95vw;
     height: 0vh;
+    
+    box-shadow: inset 0.33rem 0 0 0 $body-bg-colour,
+                inset -0.33rem 0 0 0 $body-bg-colour;
 
-    animation: revealHomeContentY var(--revealHomeContent-animation-time) 1500ms;
-    animation-fill-mode: forwards;
+    // filter: blur(1rem);
+
+    animation: revealHomeContentY var(--revealHomeContent-animation-time) 1500ms forwards,
+                hideBoxShadow 1.25s 2.25s ease forwards;
   }
 
   &::after {
@@ -70,8 +95,12 @@
 
     width: 0vw;
     height: 90vh;
-  
-    animation: revealHomeContentX var(--revealHomeContent-animation-time) 1500ms forwards, bgGradientInitX 5s 3.5s ease forwards, bgGradientContinueX 15s 10s ease infinite;
+    
+    box-shadow: inset 0 0.33rem 0 0 $body-bg-colour,
+                inset 0 -0.33rem 0 0 $body-bg-colour;
+
+    animation: revealHomeContentX var(--revealHomeContent-animation-time) 1500ms forwards,
+                hideBoxShadow 1.25s 2.25s ease forwards;
   }
 
   .scrollIcon {
@@ -86,6 +115,9 @@
 
   &::before, &::after {
     display: block;
+    background: none;
+    // filter: blur(10rem);
+
   }
 }
 
@@ -103,31 +135,42 @@
   }
 }
 
-// animation for gradient below
+@keyframes showOpacity {
+  to {
+    opacity: 1;
+  }
+}
 
-// @keyframes bgGradientInitX {
-//   from {
-//     background-color: $body-bg-colour;
-//   }
-//   to {
-//     // background: linear-gradient(-45deg, #08090C, #101218, #181C25, #202531);
-//     background: linear-gradient(-45deg, $body-bg-colour, #101218, #181C25, #202531);
-//     background-size: 400% 400%;
-//     background-position: 0% 50%;
-//   }
-// }
+@keyframes hideBorder {
+  // from {
+  //   border: 0.33rem solid white;
+  // }
+  to {
+    border: none;
+  }
+}
 
-// @keyframes bgGradientContinueX {
-//   0% {
-//     background-position: 0% 50%;
-//   }  
-//   50% {
-//     background-position: 100% 50%;
-//   }
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
+@keyframes hideBoxShadow {
+  // from {
+  //   box-shadow: inset 0.33rem 0 0 0 $body-bg-colour,
+  //               inset -0.33rem 0 0 0 $body-bg-colour;
+  // }
+  to {
+    box-shadow: none;
+  }
+}
+
+@keyframes bgGradient {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 /* CONTENT BORDER CONTAINER end ======================== */
 
@@ -140,6 +183,34 @@
   opacity: 0;
 
   animation: revealWorksCont 1.5s 1.5s forwards;
+
+  .glass {
+    position: absolute;
+    min-width: 95vw;
+    min-height: 90vh;
+    max-width: 95vw;
+    max-height: 90vh;
+    background: linear-gradient(-135deg, #1b263b, #0d1b2a, $body-bg-colour);
+    background-size: 400% 400%;
+    filter: blur(0.75rem);
+    box-shadow: 0 0 1000px 0;
+    z-index: 1;
+    opacity: 0;
+
+    animation: showOpacity 1.5s 2s ease forwards, bgGradient 15s 2.5s ease infinite;
+  }
+
+  .bg {
+    @include fillViewport();
+
+    position: absolute;
+    background: linear-gradient(-135deg, #1b263b, #0d1b2a, $body-bg-colour);
+    background-size: 400% 400%;
+    opacity: 0;
+    z-index: 1;
+    
+    animation: showOpacity 1.5s 2s ease forwards, bgGradient 15s 2.5s ease infinite;
+  }
 }
 
 .worksCont {

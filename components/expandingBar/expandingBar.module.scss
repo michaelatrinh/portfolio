@@ -29,8 +29,8 @@
 
     background-color: $body-bg-colour;
   
-    animation: expandX var(--expand-animation-time);
-    animation-fill-mode: forwards;
+    animation: expandX var(--expand-animation-time) forwards, 
+                hideOpacity 10ms 2.4s ease forwards;
   }
 
   &::after {
@@ -43,7 +43,8 @@
   
     background-color: $body-bg-colour;
   
-    animation: expandY var(--reallyExpand-animation-time) var(--expand-animation-time) forwards;
+    animation: expandY var(--reallyExpand-animation-time) var(--expand-animation-time) forwards, 
+                hideOpacity 10ms 2.4s ease forwards;
   }
 }
 
@@ -75,6 +76,12 @@
     bottom: -999%;
     left: -999%;
     right: -999%;
+  }
+}
+
+@keyframes hideOpacity {
+  to {
+    opacity: 0;
   }
 }
 
