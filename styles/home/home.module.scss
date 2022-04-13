@@ -15,6 +15,16 @@
   background: none;
 }
 
+.mainCont {
+  animation: bgChange 100ms 1500ms forwards;
+}
+
+@keyframes bgChange {
+  to {
+    background-color: $body-bg-colour;
+  }
+}
+
 /* CONTENT BORDER ANIMATION =========================== */
 .homeWrapper {
   @include fillViewport();

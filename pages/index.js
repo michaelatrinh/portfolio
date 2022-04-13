@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main className={scss.mainCont}>
       {/* home */}
       <section className={scss.homeWrapper}>
         {/* expanding bar when webpage loads */}
