@@ -33,7 +33,7 @@ body {
 
   scroll-behavior: smooth;
 
-  animation: bgChange 100ms 1500ms forwards;
+  // animation: bgChange 100ms 1500ms forwards;
 }
 
 main {
@@ -71,8 +71,8 @@ nav {
   box-sizing: border-box;
 }
 
-@keyframes bgChange {
-  to {
-    background-color: $body-bg-colour;
-  }
-}
+// @keyframes bgChange {
+//   to {
+//     background-color: $body-bg-colour;
+//   }
+// }
