@@ -16,8 +16,8 @@
   }
 }
 
-/* WORKS SECTION =================================== */
-.worksWrapper {
+/* ABOUT SECTION =================================== */
+.aboutWrapper {
   @include fillViewport();
   @include flexCentering();
 
@@ -55,7 +55,7 @@
   }
 }
 
-.worksCont {
+.aboutCont {
   @include fillViewport();
   @include flexCentering();
   
@@ -87,15 +87,9 @@
   
     // animation: revealHomeContentX var(--revealHomeContent-animation-time) 1500ms forwards, bgGradientInitX 5s 3.5s ease forwards, bgGradientContinueX 15s 10s ease infinite;
   }
-
-  .worksTitle {
-    position: absolute;
-    top: -2rem;
-    z-index: 2;
-  }
 }
 
-.worksCont.worksContAnimate {
+.aboutCont.aboutContAnimate {
   background-color: transparent;
 
   &::before, &::after {
@@ -114,15 +108,30 @@
 
 .aboutContentWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 75%;
+  width: 80%;
   height: 100%;
   z-index: 2;
 
   &Left {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
+
+    &SocialsWrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 25rem;
+
+      .socialIcons {
+        width: 4rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   &Right {
@@ -135,27 +144,37 @@
     &Title {
       @include noMargins();
 
-      color: white;
+      font-family: $primary-font;
       font-size: 3rem;
       font-weight: 400;
+
+      opacity: 0.75;
+      color: $content-light-colour;
+      text-shadow: -1px 0 $content-light-colour, 
+                    0 1px $content-light-colour, 
+                    1px 0 $content-light-colour, 
+                    0 -1px $content-light-colour;
     }
 
     &Subtitle {
       @include noMargins();
 
       color: white;
+      font-family: $primary-font;
       font-size: 2rem;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     &Para {
       color: white;
+      font-family: $primary-font;
+      font-weight: 200;
     }
   }
   
   .headshot {
-    max-width: 200px;
+    max-width: 25rem;
     height: auto;
-    border-radius: 55rem;
+    border-radius: 1rem;
   }
 }

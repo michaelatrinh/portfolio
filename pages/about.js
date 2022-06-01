@@ -7,15 +7,44 @@ export default function About(){
   return (
     <main className={scss.mainCont}>
       <NavBar />
-      <section className={scss.worksWrapper}>
+      <section className={scss.aboutWrapper}>
         {/* bg */}
         <div className={scss.bg} />
         {/* glass effect */}
         <div className={scss.glass} />
-        <section className={`${scss.worksCont} ${scss.worksContAnimate}`}>
+        <section className={`${scss.aboutCont} ${scss.aboutContAnimate}`}>
           <div className={scss.aboutContentWrapper}>
             <div className={scss.aboutContentWrapperLeft}>
+              {/* headshot photo */}
               <img src='headshot.png' alt='Headshot Photo' className={scss.headshot} />
+              <div className={scss.aboutContentWrapperLeftSocialsWrapper}>
+                {/* <a target="_blank" href="https://icons8.com/icon/8808/linkedin">LinkedIn</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
+                <img 
+                  src='icons8-linkedin.svg' 
+                  alt='LinkedIn' 
+                  className={scss.socialIcons} 
+                  onClick={() => window.open("https://www.linkedin.com/in/michaelatrinh/", '_blank')}  
+                />
+
+                {/* <a target="_blank" href="https://icons8.com/icon/62856/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
+                <img 
+                  src='icons8-github.svg' 
+                  alt='GitHub' 
+                  className={scss.socialIcons} 
+                  onClick={() => window.open("https://github.com/michaelatrinh", '_blank', 'noopener noreferrer')}
+                />
+
+                {/* <a target="_blank" href="https://icons8.com/icon/YRRhCXfA0Vd0/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
+                <img 
+                  src='icons8-mail.svg' 
+                  alt='eMail' 
+                  className={scss.socialIcons} 
+                  onClick={(e) => {
+                    window.location.href = "mailto:trinh.michael98@gmail.com";
+                    e.preventDefault();
+                  }}
+                />
+              </div>
             </div>
             <div className={scss.aboutContentWrapperRight}>
               <h1 className={scss.aboutContentWrapperRightTitle}>Michael Trinh</h1>
