@@ -50,7 +50,7 @@ export default function About(){
               <h1 className={scss.aboutContentWrapperRightTitle}>Michael Trinh</h1>
               <h2 className={scss.aboutContentWrapperRightSubtitle}>Front End Developer</h2>
               <p className={scss.aboutContentWrapperRightPara}>
-                Hi, I'm Michael, and I'm a front end developer with experience in UI & UX design. I'm primarily trained and experienced in front end development and languages like:
+                {"Hi, I'm Michael, and I'm a front end developer with experience in UI & UX design. I'm primarily trained and experienced in front end development and languages like:"}
                 <br />
                 <br />
                 • Mobile and web app development, <br />
