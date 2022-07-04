@@ -6,6 +6,19 @@
 @import "@/styles/partials.scss";
 @import "@/styles/mixins.scss";
 
+
+
+.wipMessage {
+  position: absolute;
+  z-index: 1000;
+  top: 1rem;
+
+  &Msg {
+    color: gold;
+  }
+}
+
+
 .expandBarCont {
   @include flexCentering();
   @include fillViewport();
