@@ -10,6 +10,7 @@ import ScrollToView from '@/components/scrollToView';
 import WorksTitle from '@/components/worksTitle';
 import WorksSwiper from '@/components/worksSwiper';
 import WorksCarousel from '@/components/worksCarousel';
+import {IoIosWarning} from 'react-icons/io';
 
 export default function Home() {
   const worksSectionRef = useRef();
@@ -22,6 +23,13 @@ export default function Home() {
 
   return (
     <main className={scss.mainCont}>
+
+
+      <div className={scss.wipMessage}>
+        <h1 className={scss.wipMessageMsg}><IoIosWarning />WORK IN PROGRESS WEBSITE<IoIosWarning /></h1>
+      </div>
+
+
       {/* home */}
       <section className={scss.homeWrapper}>
         {/* expanding bar when webpage loads */}
