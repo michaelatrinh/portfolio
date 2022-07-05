@@ -71,7 +71,7 @@ export default function Home() {
         <div className={scss.bg} />
         {/* glass effect */}
         <div className={scss.glass} />
-        <section className={`${scss.aboutCont} ${scss.aboutContAnimate}`} ref={worksSectionRef}>
+        <section className={`${scss.aboutCont} ${scss.aboutContAnimate}`}>
           <div className={scss.aboutContentWrapper}>
             <div className={scss.aboutContentWrapperLeft}>
               <img src='headshot.png' alt='Headshot Photo' className={scss.headshot} />

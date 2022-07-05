@@ -14,7 +14,7 @@
   max-height: 90vh;
   // background: linear-gradient(-135deg, #ee9837, #ffee90, #dfefb9, #57ba68);
   // background: linear-gradient(-135deg, #ee9837, #57ba68);
-  background: linear-gradient(-135deg, #57ba68, #294a2f, #0d1b2a, $body-bg-colour);
+  background: linear-gradient(-135deg, #a3241a, #9e281d, #0d1b2a, $body-bg-colour);
   background-size: 400% 400%;
   filter: blur(0.75rem);
   box-shadow: 0 0 1000px 0;
@@ -158,7 +158,7 @@
     }
   }
 
-  .reshareScreens {
+  .cinemagicScreens {
     max-width: 25rem;
     height: 50vh;
     object-fit: cover;
