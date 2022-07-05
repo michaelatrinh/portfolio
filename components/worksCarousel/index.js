@@ -204,16 +204,16 @@ export default function WorksCarousel(){
   }
 
   const HandleProjectClick = () => {
-    // if(BStart) return router.push("/works/reshare");
-    if(BStart) return window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer');
+    if(BStart) return router.push("/works/reshare");
+    // if(BStart) return window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer');
     
     // if(AmovedToMiddle) return router.push("/works/cleantable");
-    // if(BmovedToMiddle) return router.push("/works/reshare");
-    // if(CmovedToMiddle) return router.push("/works/cinemagic");
+    if(BmovedToMiddle) return router.push("/works/reshare");
+    if(CmovedToMiddle) return router.push("/works/cinemagic");
 
     if(AmovedToMiddle) return window.open("https://github.com/michaelatrinh/Clean-Table-App", '_blank', 'noopener noreferrer');
-    if(BmovedToMiddle) return window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer');
-    if(CmovedToMiddle) return window.open("https://github.com/danielfubcit/cinemagic", '_blank', 'noopener noreferrer');
+    // if(BmovedToMiddle) return window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer');
+    // if(CmovedToMiddle) return window.open("https://github.com/danielfubcit/cinemagic", '_blank', 'noopener noreferrer');
   }
 
   const reshareText = () => {
@@ -221,8 +221,8 @@ export default function WorksCarousel(){
       return (
         <div className={scss.activeText}>
           <h2 
-            // onClick={() => router.push("/works/reshare")}
-            onClick={() => window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer')}
+            onClick={() => router.push("/works/reshare")}
+            // onClick={() => window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer')}
             className={scss.heading}
           >
             Reshare
@@ -234,8 +234,8 @@ export default function WorksCarousel(){
       return (
         <div className={scss.activeText}>
           <h2 
-            // onClick={() => router.push("/works/reshare")}
-            onClick={() => window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer')}
+            onClick={() => router.push("/works/reshare")}
+            // onClick={() => window.open("https://github.com/michaelatrinh/reshareApp", '_blank', 'noopener noreferrer')}
             className={scss.heading}
           >
             Reshare
@@ -268,8 +268,8 @@ export default function WorksCarousel(){
       return (
         <div className={scss.activeText}>
           <h2 
-            // onClick={() => router.push("/works/cinemagic")}
-            onClick={() => window.open("https://github.com/danielfubcit/cinemagic", '_blank', 'noopener noreferrer')}
+            onClick={() => router.push("/works/cinemagic")}
+            // onClick={() => window.open("https://github.com/danielfubcit/cinemagic", '_blank', 'noopener noreferrer')}
             className={scss.heading}
           >
             Cinemagic
