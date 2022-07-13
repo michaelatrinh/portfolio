@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import scss from '@/styles/home/home.module.scss';
 import { IoIosWarning } from 'react-icons/io';
 
