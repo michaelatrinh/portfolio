@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
-import Link from 'next/link';
+import React, { useRef } from 'react';
 import scss from '@/styles/home/home.module.scss';
+import { IoIosWarning } from 'react-icons/io';
 
 // components
 import NavBar from '@/components/navBar';
@@ -8,18 +8,16 @@ import ExpandingContentBar from '@/components/expandingBar';
 import WelcomeMsg from '@/components/welcomeMsg';
 import ScrollToView from '@/components/scrollToView';
 import WorksTitle from '@/components/worksTitle';
-import WorksSwiper from '@/components/worksSwiper';
 import WorksCarousel from '@/components/worksCarousel';
-import {IoIosWarning} from 'react-icons/io';
 
 export default function Home() {
-  const worksSectionRef = useRef();
+  const sectionRef = useRef<HTMLElement>(null);
 
   const handleScrollDownClick = () => {
-    worksSectionRef.current.scrollIntoView({
+    sectionRef.current!.scrollIntoView({
       behavior: 'smooth',
-    })
-  }
+    });
+  };
 
   return (
     <main className={scss.mainCont}>
@@ -57,7 +55,7 @@ export default function Home() {
         <div className={scss.bg} />
         {/* glass effect */}
         <div className={scss.glass} />
-        <section className={`${scss.worksCont} ${scss.worksContAnimate}`} ref={worksSectionRef}>
+        <section className={`${scss.worksCont} ${scss.worksContAnimate}`} ref={sectionRef}>
           <div className={scss.worksTitle}>
             <WorksTitle />
           </div>
