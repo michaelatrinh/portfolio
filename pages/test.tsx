@@ -5,8 +5,9 @@ import PageHead from "@/components/_head";
 
 import NavBar from "@/components/navBar";
 import Header from "@/components/homeHeader";
-import WorksSummary from "@/components/worksSummary";
 import Skills from "@/components/homeSkills";
+import WorksSummary from "@/components/worksSummary";
+import WorksShowcase from "@/components/worksShowcase";
 
 export default function Test(): JSX.Element {
   return (
@@ -17,19 +18,8 @@ export default function Test(): JSX.Element {
 
       <Header />
       <Skills />
-      {/* <WorksSummary /> */}
-
-      {/* <div className={scss.worksDisplayWrapper} data-scroll-section>
-        <div className={scss.contentWrapper}>
-          <div className={scss.worksDisplayWrapper_left}>
-
-          </div>
-          <div className={scss.worksDisplayWrapper_right}>
-
-          </div>
-        </div>
-      </div> */}
-
+      <WorksSummary />
+      {/* <WorksShowcase /> */}
     </>
   )
 }

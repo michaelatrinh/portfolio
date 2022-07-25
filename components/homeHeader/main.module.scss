@@ -8,7 +8,7 @@
 
 .contentWrapper {
   padding: 0 3rem;
-}
+} 
 
 .homeWrapper {
   @include noMargins();
@@ -29,17 +29,57 @@
       &_line {
         display: block;
 
-        font-family: $primary-font;
-        font-size: 12vw;
-        font-weight: 600;
-        line-height: 1.1;
-        color: $content-egg-colour;
+        transform-origin: center top;
+        transform-style: preserve-3d;
+        transition-property: opacity, transform;
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        transition-duration: 1s;
+        transform: translateY(100%) rotateX(-80deg);
+        opacity: 0;
 
-        &:last-child {
-          animation: slideUpRole 1000ms ease-in-out 300ms 1 normal forwards;
-          transition-delay: 200ms;
-          font-size: 7vw;
+        &_text {
+          font-family: $primary-font;
+          font-size: 12vw;
+          font-weight: 500;
+          line-height: 1.1;
+          color: $content-egg-colour;
         }
+
+        &_iv {
+          transform: none;
+          opacity: 1;
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+
+        #frontEndDev {
+          font-size: 7vw;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &_hr {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      // right: 0;
+      margin: 0;
+    
+      display: block;
+      height: 1px;
+      padding: 0;
+      width: 100%;
+      border-top: 1px solid #FFFFFF;
+    
+      transform: scaleX(0);
+      transition-property: transform;
+      transition-duration: 1000ms;
+      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+      transition-delay: 0ms;
+
+      &_iv {
+        transform-origin: left;
+        transform: scaleX(1);
       }
     }
   }

@@ -13,6 +13,7 @@
 .worksSummaryWrapper {
   @include noMargins();
   width: 100%;
+  padding-top: 5rem;
 
   &_summary {
     margin: 3.75rem 0 7.5rem;
@@ -23,7 +24,7 @@
 
     font-family: $primary-font;
     font-size: 8rem;
-    font-weight: 600;
+    font-weight: 400;
     color: $content-egg-colour;
 
     // transform: translateY(60px);
@@ -86,4 +87,25 @@
       }
     }
   }
+}
+
+.cinemagicWrapper {
+  @include noMargins();
+  width: 100%;
+  margin-top: 5rem;
+
+  .leftWrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+  }
+
+  .rightWrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    padding-left: 3.75rem;
+  }
+
+  
 }

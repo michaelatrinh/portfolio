@@ -1,0 +1,11 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.contentWrapper {
+  padding: 0 3rem;
+}

@@ -7,14 +7,36 @@ export default function Header(): JSX.Element {
         <div className={scss.contentWrapper}>
           <header className={scss.header}>
             <h1 className={scss.header_title}>
-              <span className="header_title_line">
-                <span data-scroll data-scroll-speed="3" data-scroll-position="top">michael trinh</span>
+              <span 
+                className={scss.header_title_line} 
+                data-scroll-class={scss.header_title_line_iv} 
+                data-scroll 
+                data-scroll-speed="3"
+                data-scroll-position="top"
+              >
+                <span className={scss.header_title_line_text}>
+                  Michael Trinh
+                </span>
               </span>
-              <span className="header_title_line">
-                <span id="front_end_developer" data-scroll data-scroll-speed="2" data-scroll-position="top">front end developer</span>
+
+              <span 
+                className={scss.header_title_line}
+                data-scroll-class={scss.header_title_line_iv}
+                data-scroll
+                data-scroll-speed="2"
+                data-scroll-position="top"
+              >
+                <span id={scss.frontEndDev} className={scss.header_title_line_text}>
+                  front end developer
+                </span>
               </span>
             </h1>
-            <hr className="header_hr" data-scroll data-scroll-class="header_hr_iv" data-scroll-offset="100" />
+            <hr 
+              className={scss.header_hr} 
+              data-scroll-class={scss.header_hr_iv}
+              data-scroll
+              data-scroll-offset="100" 
+            />
           </header>
         </div>
       </div>

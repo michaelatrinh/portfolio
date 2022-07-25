@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "description": "Michael Alexander Trinh's Portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
