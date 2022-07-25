@@ -21,6 +21,43 @@
   align-items: center;
 }
 
+/* SCREEN SIZE MEDIA QUERIES */
+@mixin screen-xs {
+  @media (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin screen-2xl {
+  @media (min-width: #{$screen-2xl}) {
+    @content;
+  }
+}
+
 @mixin welcomeMsgStyles {
   width: auto;
   max-width: 0%;

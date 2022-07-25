@@ -4,18 +4,30 @@ import Link from 'next/link';
 
 export default function navBar(){
   return (
-    <header className={scss.header}>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        <Link href="/works">
-          <a>Works</a>
-        </Link>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
+      <nav className={scss.nav}>
+        <div className={scss.homeWrapper}>
+          <div>
+            <Link href="/">
+                <a>
+                  <img src='mtrinh_white.svg' alt='Home' />
+                </a>
+            </Link>
+          </div>
+        </div>
+
+        <div className={scss.linksWrapper}>
+          <div>
+            <Link href="/works">
+              <a>Works</a>
+            </Link>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
+          </div>
+        </div>
       </nav>
-    </header>  
   )
 }

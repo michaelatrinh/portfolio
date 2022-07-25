@@ -1,0 +1,74 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.contentWrapper {
+  padding: 0 3rem;
+}
+
+.homeWrapper {
+  @include noMargins();
+  @include fillViewport();
+
+  .header {
+    position: relative;
+    height: 100vh;
+
+    &_title {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      margin: 0;
+
+      perspective: 600px;
+
+      &_line {
+        display: block;
+
+        font-family: $primary-font;
+        font-size: 12vw;
+        font-weight: 600;
+        line-height: 1.1;
+        color: $content-egg-colour;
+
+        &:last-child {
+          animation: slideUpRole 1000ms ease-in-out 300ms 1 normal forwards;
+          transition-delay: 200ms;
+          font-size: 7vw;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideUpName {
+  from {
+    transform: translateY(100%) rotateX(-80deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpRole {
+  from {
+    transform: translateY(100%) rotateX(-80deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

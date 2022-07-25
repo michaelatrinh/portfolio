@@ -1,0 +1,37 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  div, h2, h3 {
+    @include noMargins();
+  }
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+
+  aspect-ratio: 3 / 4;
+  width: clamp(25%, 40%, $screen-2xl);
+  height: auto;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+
+  h2 {
+    font: 600 1.5rem $primary-font;
+  }
+
+  h3 {
+    font: 400 1.25rem $primary-font;
+  }
+}

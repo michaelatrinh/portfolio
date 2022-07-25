@@ -1,0 +1,55 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.scrollWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: 
+    ". name1 image1"
+    ". name2 image2"
+    ". name3 image3";
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  // overflow-y: scroll;
+
+  // .projectNameWrapper {
+  //   list-style-type: none;
+  // }
+
+  li {
+    font: 500 1.75rem $primary-font;
+    color: $content-light-colour;
+    list-style-type: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:nth-child(1) { grid-area: name1; }
+  
+    &:nth-child(3) { grid-area: name2; }
+  
+    &:nth-child(5) { grid-area: name3; }
+  }
+  
+  img {
+    width: 10rem;
+    height: auto;
+    border-radius: 0.66rem;
+
+    &:nth-child(2) { grid-area: image1; }
+
+    &:nth-child(4) { grid-area: image2; }
+
+    &:nth-child(6) { grid-area: image3; }
+  }
+}

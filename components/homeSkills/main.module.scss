@@ -1,0 +1,64 @@
+@use "@/styles/variables.scss";
+@use "@/styles/partials.scss";
+@use "@/styles/mixins.scss";
+
+@import "@/styles/variables.scss";
+@import "@/styles/partials.scss";
+@import "@/styles/mixins.scss";
+
+.contentWrapper {
+  padding: 0 3rem;
+}
+
+.skillsWrapper {
+  margin: 0;
+  // margin-top: 7rem;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  h2 {
+    font: 400 7.5vw /2 $primary-font;
+    color: $content-egg-colour;
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  summary:hover {
+    cursor: pointer;
+  }
+
+  .li {
+    &_title {
+      font: 300 5vw /1.66 $primary-font;
+      color: $content-egg-colour;
+      margin: 0;
+      opacity: 0.25;
+
+      transition-property: opacity;
+      transition-duration: 500ms;
+
+      &_iv {
+        opacity: 1;
+      }
+    }
+
+    &_sub {
+      font: 300 3.5vw /1.5 $primary-font;
+      color: $content-egg-colour;
+      margin: 0;
+      opacity: 0.25;
+      padding-left: 7.5rem;
+
+      transition-property: opacity;
+      transition-duration: 500ms;
+
+      &_iv {
+        opacity: 1;
+      }
+    }
+  }
+}
