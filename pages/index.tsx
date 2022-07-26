@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import PageHead from "@/components/_head";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
@@ -21,7 +21,7 @@ export default function Test(): JSX.Element {
 
   return (
     <>
-      <PageHead title="Test Page" />
+      <PageHead title="Michael Trinh's Portfolio" />
     
       <NavBar navWorks={handleNavWorksClick} />
 
