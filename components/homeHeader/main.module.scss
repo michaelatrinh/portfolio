@@ -14,9 +14,17 @@
   @include noMargins();
   @include fillViewport();
 
+  @include screen-sm {
+    min-height: 50vh;
+  }
+
   .header {
     position: relative;
     height: 100vh;
+
+    @include screen-sm {
+      height: 50vh;
+    }
 
     &_title {
       position: absolute;

@@ -27,7 +27,7 @@
     @content;
   }
 }
-
+ 
 @mixin screen-sm {
   @media (max-width: #{$screen-sm}) {
     @content;
@@ -53,7 +53,7 @@
 }
 
 @mixin screen-2xl {
-  @media (min-width: #{$screen-2xl}) {
+  @media (max-width: #{$screen-2xl}) {
     @content;
   }
 }

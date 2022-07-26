@@ -16,15 +16,19 @@
   padding-top: 5rem;
   position: relative;
 
+  @include screen-xl {
+    padding-top: 2rem;
+  }
+
   &_summary {
-    margin: 3.75rem 0 7.5rem;
+    margin: 3.75rem 0 5rem;
   }
 
   #worksSummary_title {
     margin: 0;
 
     font-family: $primary-font;
-    font-size: 8rem;
+    font-size: 7.5vw;
     font-weight: 400;
     color: $content-egg-colour;
 

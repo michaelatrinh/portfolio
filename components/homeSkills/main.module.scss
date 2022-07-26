@@ -11,9 +11,13 @@
 }
 
 .skillsWrapper {
-  margin: 0;
+  margin: 5rem 0 0 0;
   position: relative;
   width: 100%;
+
+  @include screen-xl {
+    margin: 3rem 0 0 0;
+  }
 
   h2 {
     font: 400 7.5vw /2 $primary-font;
@@ -58,6 +62,14 @@
         opacity: 1;
       }
     }
+  }
+}
+
+.spacingDiv {
+  padding-top: 7.5rem;
+
+  @include screen-xl {
+    padding-top: 5rem;
   }
 }
 

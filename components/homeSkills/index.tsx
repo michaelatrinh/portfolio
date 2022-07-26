@@ -11,7 +11,7 @@ export default function Skills(): JSX.Element {
         <div 
           style={{ position: "relative" }}
           data-scroll
-          data-scroll-speed="1"
+          data-scroll-speed="0.5"
           // data-scroll-position="bottom"
         >
           <h2>Skills</h2>
@@ -21,7 +21,7 @@ export default function Skills(): JSX.Element {
               data-scroll-class={scss.li_title_iv} 
               data-scroll 
               data-scroll-repeat={true} 
-              data-scroll-offset="55%, 45%"
+              data-scroll-offset="45%, 55%"
             >
               Web Development
             </summary>
@@ -32,7 +32,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   HTML / CSS
                 </span>
@@ -42,7 +42,7 @@ export default function Skills(): JSX.Element {
                   className={scss.li_sub} 
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   JavaScript
                 </span>
@@ -52,7 +52,7 @@ export default function Skills(): JSX.Element {
                   className={scss.li_sub} 
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   TypeScript
                 </span>
@@ -63,7 +63,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   React.js
                 </span>
@@ -77,7 +77,7 @@ export default function Skills(): JSX.Element {
               data-scroll-class={scss.li_title_iv} 
               data-scroll 
               data-scroll-repeat={true} 
-              data-scroll-offset="55%, 45%"
+              data-scroll-offset="45%, 55%"
             >
               Mobile App Development
             </summary>
@@ -88,7 +88,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   React Native
                 </span>
@@ -102,7 +102,7 @@ export default function Skills(): JSX.Element {
               data-scroll-class={scss.li_title_iv} 
               data-scroll 
               data-scroll-repeat={true} 
-              data-scroll-offset="55%, 45%"
+              data-scroll-offset="45%, 55%"
             >
               Database Management / Handling
             </summary>
@@ -113,7 +113,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   Firebase / Firestore
                 </span>
@@ -124,7 +124,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   MySQL
                 </span>
@@ -135,7 +135,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   MongoDB
                 </span>
@@ -146,7 +146,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   Node.js
                 </span>
@@ -160,7 +160,7 @@ export default function Skills(): JSX.Element {
               data-scroll-class={scss.li_title_iv} 
               data-scroll 
               data-scroll-repeat={true} 
-              data-scroll-offset="55%, 45%"
+              data-scroll-offset="45%, 55%"
             >
               UI / UX Design
             </summary>
@@ -171,7 +171,7 @@ export default function Skills(): JSX.Element {
                   data-scroll-class={scss.li_sub_iv} 
                   data-scroll 
                   data-scroll-repeat={true} 
-                  data-scroll-offset="55%, 45%"
+                  data-scroll-offset="45%, 55%"
                 >
                   Figma
                 </span>
@@ -179,7 +179,7 @@ export default function Skills(): JSX.Element {
             </ul>
           </details>
 
-          <div style={{ paddingBottom: "7.5rem" }}></div>
+          <div className={scss.spacingDiv}></div>
           <hr 
             className={scss.header_hr} 
             data-scroll-class={scss.header_hr_iv}

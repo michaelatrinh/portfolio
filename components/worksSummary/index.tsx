@@ -38,4 +38,6 @@ const WorksSummary = forwardRef<HTMLElement>((props, ref) => (
   </section>
 ));
 
+WorksSummary.displayName = "WorksSummary";
+
 export default WorksSummary;

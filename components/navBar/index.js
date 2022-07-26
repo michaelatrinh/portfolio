@@ -3,7 +3,9 @@ import scss from './navBar.module.scss';
 import Link from 'next/link';
 
 export default function navBar({
-  navWorks = () => {}
+  navSkills = () => {},
+  navWorks = () => {},
+  navContact = () => {}
 }){
   return (
       <nav className={scss.nav}>
@@ -19,13 +21,9 @@ export default function navBar({
 
         <div className={scss.linksWrapper}>
           <div>
+            <a onClick={navSkills}>Skills</a>
             <a onClick={navWorks}>Works</a>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
+            <a onClick={navContact}>Contact</a>
           </div>
         </div>
       </nav>

@@ -14,6 +14,7 @@
   @include noMargins();
   width: 100%;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   position: relative;
 
   .leftWrapper {
@@ -24,22 +25,45 @@
     
     .works {
       &_text {
-        // max-width: 400px;
-        padding-top: 20vw;
+        padding-top: 15vw;
         padding-left: 5rem;
+
+        @include screen-2xl {
+          padding-top: 12.5vw;
+        }
+
+        @include screen-xl {
+          padding-top: 11vw;
+        }
 
         h4 {
           font: 400 4rem /2 $primary-font;
           color: $content-egg-colour;
           margin: 0;
+
+          @include screen-2xl {
+            font-size: 3rem;
+          }
+
+          @include screen-xl {
+            font-size: 2.66rem;
+          }
         }
 
         p {
           font: 300 1.5rem /1.33 $primary-font;
           color: $content-egg-colour;
-        }
 
+          @include screen-2xl {
+            font-size: 1.33rem;
+          }
+
+          @include screen-xl {
+            font-size: 1.25rem;
+          }
+        }
       }
+
       &_logo {
         width: 100%;
         height: auto;
@@ -55,14 +79,20 @@
 
     .works {
       &_text {
-        // max-width: 400px;
-        // padding-top: 20vw;
         padding-left: 5rem;
 
         h4 {
           font: 400 3rem /2 $primary-font;
           color: $content-egg-colour;
           margin: 0;
+
+          @include screen-2xl {
+            line-height: 1;
+          }
+
+          @include screen-xl {
+            font-size: 2.5rem;
+          }
         }
 
         ul {
@@ -81,8 +111,18 @@
           color: $content-egg-colour;
           margin: 0;
 
+          @include screen-2xl {
+            font: 300 1.33rem /1.33 $primary-font;
+          }
+
+          @include screen-xl {
+            font-size: 1.25rem;
+            line-height: 2;
+          }
+
           &:hover {
             cursor: pointer;
+            
             border-bottom: 1px solid $content-egg-colour;
           }
         }
