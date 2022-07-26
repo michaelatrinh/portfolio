@@ -2,7 +2,9 @@ import React from 'react';
 import scss from './navBar.module.scss';
 import Link from 'next/link';
 
-export default function navBar(){
+export default function navBar({
+  navWorks = () => {}
+}){
   return (
       <nav className={scss.nav}>
         <div className={scss.homeWrapper}>
@@ -17,9 +19,7 @@ export default function navBar(){
 
         <div className={scss.linksWrapper}>
           <div>
-            <Link href="/works">
-              <a>Works</a>
-            </Link>
+            <a onClick={navWorks}>Works</a>
             <Link href="/about">
               <a>About</a>
             </Link>

@@ -69,6 +69,7 @@
         transition: 0.25s;
 
         &:hover {
+          cursor: pointer;
           box-shadow: inset 0px -1px 0px 0px $content-light-colour;
         }
       }

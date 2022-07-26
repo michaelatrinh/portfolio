@@ -12,7 +12,7 @@ export default function Skills(): JSX.Element {
           style={{ position: "relative" }}
           data-scroll
           data-scroll-speed="1"
-          data-scroll-position="bottom"
+          // data-scroll-position="bottom"
         >
           <h2>Skills</h2>
           <details>

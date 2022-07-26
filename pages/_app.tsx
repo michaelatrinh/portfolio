@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <LocomotiveScrollProvider 
-      options={{ smooth: true }}
+      options={{ smooth: true, multiplier: 1, lerp: 0.015 }}
       watch={[ route ]}
       containerRef={containerRef}
     >
