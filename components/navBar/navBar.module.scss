@@ -6,28 +6,84 @@
 @import "@/styles/partials.scss";
 @import "@/styles/mixins.scss";
 
-.header {
+.nav {
+  z-index: 99;
+
+  display: flex;
+  align-items: center;
   position: fixed;
-  inset: 5rem;
-  
-  width: 6rem;
-  height: 9.5rem;
+  top: 0;
 
-  z-index: 1;
+  min-width: 100vw;
+
   opacity: 0;
+  animation: fadeDropIn 1.5s ease-out 0s 1 normal forwards;
 
-  animation: fadeNavIn var(--fadeNavIn-animation-time) 2000ms forwards;
+  .homeWrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
 
-  nav {
-    z-index: 99;
+    div {
+      width: 100%;
+      padding-left: 3rem;
+
+      @include screen-sm {
+        padding-left: 0rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+
+        width: min-content;
+
+        color: $content-light-colour;
+
+        img {
+          width: 10rem;
+        }
+      }
+    }
+  }
+
+  .linksWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
+    div {
+      display: flex;
+      justify-content: space-evenly;
+
+      min-width: 50%;
+      padding-right: 3rem;
+
+      a {
+        font: 300 1.5rem /2.5 $primary-font;
+        color: $content-light-colour;
+
+        width: max-content;
+        padding: 0rem 1rem;
+        
+        transition: 0.25s;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: inset 0px -1px 0px 0px $content-light-colour;
+        }
+      }
+    }
   }
 }
 
-@keyframes fadeNavIn {
-  from {
+@keyframes fadeDropIn {
+  0% {
     opacity: 0;
+    transform: translateY(-1rem);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0rem);
   }
 }

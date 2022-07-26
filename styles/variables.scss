@@ -1,5 +1,14 @@
+/*! screen breakpoints */
+$screen-xs: 24rem; // 384px
+$screen-sm: 30rem; // 480px
+$screen-md: 48rem; // 768px
+$screen-lg: 62rem; // 992px
+$screen-xl: 80rem; // 1280px
+$screen-2xl: 96rem; // 1536px
+
 /*! colours */
 $content-light-colour: #FFFFFF;
+$content-egg-colour: #daddd8;
 $content-light-colour-highlight: deepskyblue;
 $content-dark-colour: #000000;
 $content-dark-colour-highlight: darkgoldenrod;

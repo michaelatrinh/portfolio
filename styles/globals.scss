@@ -40,31 +40,13 @@ main {
   @include fillViewport();
   @include flexCentering();
   flex-direction: column;
+
+  background: linear-gradient(-135deg, #2d3c58 , #14283d);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  max-width: 6rem;
-
-  a {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    font-weight: 200;
-    color: $content-light-colour;
-    transition: 0.5s;
-  
-    &:hover {
-      color: $content-light-colour-highlight;
-
-      transform: scale(1.1);
-    }
-  }
 }
 
 * {

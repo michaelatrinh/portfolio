@@ -1,5 +1,6 @@
 {
-  "name": "tester",
+  "name": "portfolio",
+  "description": "Michael Alexander Trinh's Portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +10,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "locomotive-scroll": "^4.1.4",
     "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-locomotive-scroll": "^0.2.2",
     "sass": "^1.53.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@types/node": "18.0.3",
+    "@types/node": "18.0.4",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "eslint": "8.19.0",
