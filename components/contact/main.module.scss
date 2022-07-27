@@ -8,6 +8,8 @@
 
 .contentWrapper {
   padding: 0 3rem;
+
+  display: flex;
 }
 
 .contactWrapper {
@@ -33,7 +35,6 @@
     display: inline-block;
     vertical-align: top;
     width: 60%;
-    height: 90vh;
     padding-left: 3.75rem;
 
     &_socialWrapper {
@@ -62,7 +63,5 @@
         }
       }
     }
-
-
   }
 }
