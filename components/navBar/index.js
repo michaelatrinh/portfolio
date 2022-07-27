@@ -1,8 +1,8 @@
 import React from 'react';
 import scss from './navBar.module.scss';
-import Link from 'next/link';
 
 export default function navBar({
+  navHome = () => {},
   navSkills = () => {},
   navWorks = () => {},
   navContact = () => {}
@@ -11,11 +11,9 @@ export default function navBar({
       <nav className={scss.nav}>
         <div className={scss.homeWrapper}>
           <div>
-            <Link href="/">
-                <a>
-                  <img src='mtrinh_white.svg' alt='Home' />
-                </a>
-            </Link>
+            <a onClick={navHome}>
+              <img src='mtrinh_white.svg' alt='Home' />
+            </a>
           </div>
         </div>
 
