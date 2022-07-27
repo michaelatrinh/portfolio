@@ -13,9 +13,11 @@
 .worksWrapper {
   @include noMargins();
   width: 100%;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  // margin-top: 5rem;
+  // margin-bottom: 5rem;
   position: relative;
+
+  // background: linear-gradient(180deg, #0a0a0a, #901E14 50%, #0a0a0a);
 
   .leftWrapper {
     display: inline-block;
@@ -27,6 +29,7 @@
       &_text {
         padding-top: 15vw;
         padding-left: 5rem;
+        // padding-left: 33vw;
 
         @include screen-2xl {
           padding-top: 12.5vw;
@@ -46,16 +49,27 @@
           }
 
           @include screen-xl {
-            font-size: 2.66rem;
+            font-size: 2.5rem;
           }
         }
 
+        &_number {
+          font: 300 1.5rem /2 $primary-font;
+          color: $content-egg-colour;
+          margin: 0;
+        }
+
+        &_responsiveIcons {
+          font-size: 1.5vw;
+          color: $content-light-colour;
+        }
+
         p {
-          font: 300 1.5rem /1.33 $primary-font;
+          font: 300 1.33rem /1.33 $primary-font;
           color: $content-egg-colour;
 
           @include screen-2xl {
-            font-size: 1.33rem;
+            font-size: 1.25rem;
           }
 
           @include screen-xl {
@@ -67,6 +81,11 @@
       &_logo {
         width: 100%;
         height: auto;
+      }
+
+      &_resharePhone {
+        width: 100%;
+        height: 50%;
       }
     }
   }
@@ -82,16 +101,17 @@
         padding-left: 5rem;
 
         h4 {
-          font: 400 3rem /2 $primary-font;
+          font: 400 3.1rem /2 $primary-font;
           color: $content-egg-colour;
           margin: 0;
 
           @include screen-2xl {
+            font-size: 2.25rem;
             line-height: 1;
           }
 
           @include screen-xl {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
           }
         }
 
@@ -99,9 +119,17 @@
           list-style-type: none;
 
           li {
-            font: 300 1.5rem /1.5 $primary-font;
+            font: 300 1.4rem /1.5 $primary-font;
             color: $content-egg-colour;
             margin: 0;
+
+            @include screen-2xl {
+              font-size: 1.25rem;
+            }
+
+            @include screen-xl {
+              font-size: 1.33rem;
+            }
           }
         }
 
@@ -128,10 +156,19 @@
         }
       }
 
-      &_logo {
-        width: 100%;
-        height: auto;
+      &_logoWrapper {
+        // padding-right: 5rem;
+
+        &_logo {
+          width: 100%;
+          height: auto;
+        }
       }
+
+      // &_logo {
+      //   width: 100%;
+      //   height: auto;
+      // }
     }
   }
 }

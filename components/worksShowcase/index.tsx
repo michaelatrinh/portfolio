@@ -1,11 +1,9 @@
 import React from 'react';
 import scss from '@/components/worksShowcase/main.module.scss';
-import { useRouter } from 'next/router';
-import {BsFillArrowRightSquareFill} from 'react-icons/bs';
+import { BsFillArrowRightSquareFill } from 'react-icons/bs';
+import { MdOutlineSmartphone, MdOutlineComputer } from 'react-icons/md';
 
 export default function WorksShowcase(): JSX.Element {
-  const router = useRouter();
-
   return (
     <>
       <section 
@@ -20,19 +18,27 @@ export default function WorksShowcase(): JSX.Element {
                 data-scroll
                 data-scroll-speed="-2"
               >
-                <h4>01. Cinemagic</h4>
+                <h4>
+                  <span className={scss.works_text_number}>01.</span>
+                    &nbsp; Cinemagic 
+                  <span className={scss.works_text_responsiveIcons}>
+                    &nbsp; &nbsp; <MdOutlineComputer /> 
+                    <MdOutlineSmartphone />
+                  </span>
+                </h4>
                 <p>A school web application project that provides users with movie recommendations based on data collected from IMDB and compiled by Kaggle.</p>
               </div>
             </div>
             <div className={scss.rightWrapper}>
               <div
+                className={scss.works_logoWrapper}
                 data-scroll
                 data-scroll-speed="2"
               >
                 <img 
                   src='/cinemagic/cinemagicLogo.png' 
                   alt='Cinemagic App Logo' 
-                  className={scss.works_logo}
+                  className={scss.works_logoWrapper_logo}
                 />
               </div>
             </div>
@@ -45,7 +51,7 @@ export default function WorksShowcase(): JSX.Element {
                 data-scroll-speed="2"
               >
                 <img 
-                  src='/cinemagic/screens.png' 
+                  src='/cinemagic/cinemagic_monitor_phone.png' 
                   alt='Cinemagic Screens' 
                   className={scss.works_logo}
                 />
@@ -56,7 +62,6 @@ export default function WorksShowcase(): JSX.Element {
                 className={scss.works_text}
                 data-scroll
                 data-scroll-speed="0.25"
-                // data-scroll-position="bottom"
               >
                 <h4>Built With:</h4>
                 <ul>
@@ -90,19 +95,26 @@ export default function WorksShowcase(): JSX.Element {
                 data-scroll
                 data-scroll-speed="-2"
               >
-                <h4>02. Reshare</h4>
+                <h4>
+                  <span className={scss.works_text_number}>02.</span>
+                    &nbsp; Reshare 
+                  <span className={scss.works_text_responsiveIcons}>
+                    &nbsp; &nbsp; <MdOutlineSmartphone />
+                  </span>
+                </h4>
                 <p>A school mobile application project that serves as a marketplace to resolve and reduce the amount of food waste caused by grocery stores in the metro Vancouver region.</p>
               </div>
             </div>
             <div className={scss.rightWrapper}>
               <div
+              className={scss.works_logoWrapper}
                 data-scroll
                 data-scroll-speed="2"
               >
                 <img 
                   src='/reshare/reshareLogo.png' 
                   alt='Reshare App Logo' 
-                  className={scss.works_logo}
+                  className={scss.works_logoWrapper_logo}
                 />
               </div>
             </div>
@@ -115,7 +127,7 @@ export default function WorksShowcase(): JSX.Element {
                 data-scroll-speed="2"
               >
                 <img 
-                  src='/reshare/screens.png' 
+                  src='/reshare/reshare_phone.png' 
                   alt='Reshare Screens' 
                   className={scss.works_logo}
                 />
@@ -159,19 +171,26 @@ export default function WorksShowcase(): JSX.Element {
                 data-scroll
                 data-scroll-speed="-2"
               >
-                <h4>03. Clean Table</h4>
+                <h4>
+                  <span className={scss.works_text_number}>03.</span>
+                    &nbsp; Clean Table
+                  <span className={scss.works_text_responsiveIcons}>
+                    &nbsp; &nbsp; <MdOutlineComputer />
+                  </span>
+                </h4>
                 <p>A school web application project that aims to provide a solution to the increasing amount of food wastes found in landfills, by offering users a way to track their ingredients left within their pantry and create recipes utilizing their near-expiring produce.</p>
               </div>
             </div>
             <div className={scss.rightWrapper}>
               <div
+                className={scss.works_logoWrapper}
                 data-scroll
                 data-scroll-speed="2"
               >
                 <img 
                   src='/cleantable/cleantableLogo2.png' 
                   alt='Clean Table App Logo' 
-                  className={scss.works_logo}
+                  className={scss.works_logoWrapper_logo}
                 />
               </div>
             </div>
@@ -184,8 +203,8 @@ export default function WorksShowcase(): JSX.Element {
                 data-scroll-speed="2"
               >
                 <img 
-                  src='/reshare/screens.png' 
-                  alt='Reshare Screens' 
+                  src='/cleantable/cleantable_screens.png' 
+                  alt='Clean Table Screens' 
                   className={scss.works_logo}
                 />
               </div>

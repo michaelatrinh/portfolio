@@ -20,14 +20,36 @@ export default function Header(): JSX.Element {
               </span>
 
               <span 
-                className={scss.header_title_line}
-                data-scroll-class={scss.header_title_line_iv}
+                className={scss.header_title_line2}
+                data-scroll-class={scss.header_title_line2_iv}
                 data-scroll
                 data-scroll-speed="2"
                 data-scroll-position="top"
               >
-                <span id={scss.frontEndDev} className={scss.header_title_line_text}>
-                  front end developer
+                <span className={scss.header_title_line2_text}>
+                  front &nbsp;
+                </span>
+              </span>
+              <span 
+                className={scss.header_title_line2}
+                data-scroll-class={scss.header_title_line2_iv}
+                data-scroll
+                data-scroll-speed="2.5"
+                data-scroll-position="top"
+              >
+                <span className={scss.header_title_line2_text}>
+                  end &nbsp;
+                </span>
+              </span>
+              <span 
+                className={scss.header_title_line2}
+                data-scroll-class={scss.header_title_line2_iv}
+                data-scroll
+                data-scroll-speed="3"
+                data-scroll-position="top"
+              >
+                <span className={scss.header_title_line2_text}>
+                  developer
                 </span>
               </span>
             </h1>
