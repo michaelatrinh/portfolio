@@ -16,7 +16,7 @@
   --fadeHelloIn-animation-time: 1500ms;
   --fadeNavIn-animation-time: 1000ms;
   /* colours */
-  --content-light-colour: #FFFFFF;
+  --content-light-colour: #ffffff;
   --content-highlight-colour: deepskyblue;
 }
 
@@ -41,7 +41,8 @@ main {
   @include flexCentering();
   flex-direction: column;
 
-  background: linear-gradient(-135deg, #2d3c58 , #14283d);
+  // background: linear-gradient(-135deg, #2d3c58 , #14283d);
+  background-color: #121316;
 }
 
 a {
