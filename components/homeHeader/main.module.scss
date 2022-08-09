@@ -8,7 +8,8 @@
 
 .contentWrapper {
   padding: 0 3rem;
-} 
+  position: relative;
+}
 
 .homeWrapper {
   @include noMargins();
@@ -21,7 +22,6 @@
   .header {
     position: relative;
     height: 100vh;
-
 
     @include screen-sm {
       height: 50vh;
@@ -41,7 +41,7 @@
         transform-origin: center top;
         transform-style: preserve-3d;
         transition-property: opacity, transform;
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         transition-duration: 1s;
         transform: translateY(100%) rotateX(-80deg);
         opacity: 0;
@@ -72,7 +72,7 @@
         transform-origin: center top;
         transform-style: preserve-3d;
         transition-property: opacity, transform;
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         transition-duration: 1s;
         transform: translateY(100%) rotateX(-80deg);
         opacity: 0;
@@ -104,17 +104,17 @@
       left: 0;
       // right: 0;
       margin: 0;
-    
+
       display: block;
       height: 1px;
       padding: 0;
       width: 100%;
-      border-top: 1px solid #FFFFFF;
-    
+      border-top: 1px solid #ffffff;
+
       transform: scaleX(0);
       transition-property: transform;
       transition-duration: 1000ms;
-      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       transition-delay: 0ms;
 
       &_iv {
@@ -122,6 +122,40 @@
         transform: scaleX(1);
       }
     }
+  }
+}
+
+.spline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+
+  @include screen-2xl {
+    transform: scale(0.9);
+    right: -33%;
+  }
+
+  @include screen-xl {
+    transform: scale(0.8);
+    top: -10%;
+    right: -52.5%;
+  }
+
+  @include screen-lg {
+    transform: scale(0.65);
+    right: -80%;
+  }
+
+  @include screen-md {
+    transform: scale(0.5);
+    right: -90%;
+  }
+
+  @include screen-sm {
+    transform: scale(0.33);
+    right: -240%;
+    top: -50%;
   }
 }
 
