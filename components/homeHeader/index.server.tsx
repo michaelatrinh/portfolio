@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef } from "react";
 import scss from "@/components/homeHeader/main.module.scss";
 import Spline from "@splinetool/react-spline";
 
@@ -6,6 +6,8 @@ interface Props {
   children?: React.ReactNode;
   onSplineLoad: () => void;
 }
+
+export async function getServerSideProps() {}
 
 function ActualHeader(props: Props & { ref: React.Ref<HTMLDivElement> }) {
   const Header = forwardRef<HTMLDivElement, Props>(
