@@ -16,14 +16,12 @@
   margin-bottom: 5rem;
   position: relative;
 
-  // background: linear-gradient(180deg, #0a0a0a, #901E14 50%, #0a0a0a);
-
   .leftWrapper {
     display: inline-block;
     vertical-align: top;
     width: 40%;
     padding-right: 3.75rem;
-    
+
     .works {
       &_text {
         padding-top: 15vw;
@@ -149,7 +147,7 @@
 
           &:hover {
             cursor: pointer;
-            
+
             border-bottom: 1px solid $content-egg-colour;
           }
         }
@@ -182,16 +180,21 @@
   height: 1px;
   padding: 0;
   width: 100%;
-  border-top: 1px solid #FFFFFF;
+  border-top: 1px solid #ffffff;
 
   transform: scaleX(0);
   transition-property: transform;
   transition-duration: 1000ms;
-  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0ms;
 
   &_iv {
     transform-origin: left;
     transform: scaleX(1);
   }
+}
+
+.spline_cinemagicLogo {
+  width: 100% !important;
+  height: 100% !important;
 }

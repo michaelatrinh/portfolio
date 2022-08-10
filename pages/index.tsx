@@ -3,11 +3,12 @@ import PageHead from "@/components/_head";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 import NavBar from "@/components/navBar";
-import Header from "@/components/homeHeader";
+import Header from "@/components/homeHeader/index.server";
 import Skills from "@/components/homeSkills";
 import WorksSummary from "@/components/worksSummary";
 import WorksShowcase from "@/components/worksShowcase";
 import Contact from "@/components/contact";
+import LottieLoading from "@/components/lottieLoading/index.server.js";
 
 export default function Test(): JSX.Element {
   const [loadedWindow, setLoadedWindow] = useState(false);
@@ -28,8 +29,11 @@ export default function Test(): JSX.Element {
       setLoadedWindow(true);
     };
 
-    if (document.readyState === "complete") onPageLoad();
-    else {
+    if (document.readyState === "complete") {
+      setTimeout(() => {
+        onPageLoad();
+      }, 1500);
+    } else {
       window.addEventListener("load", onPageLoad);
       return () => window.removeEventListener("load", onPageLoad);
     }
@@ -49,7 +53,7 @@ export default function Test(): JSX.Element {
   return (
     <>
       {loadedWindow === false ? (
-        <h1 style={{ color: "white" }}>Loading...</h1>
+        <LottieLoading />
       ) : (
         <React.Fragment>
           <PageHead title="Michael Trinh's Portfolio" />
@@ -61,13 +65,7 @@ export default function Test(): JSX.Element {
             navContact={handleNavContactClick}
           />
 
-          <Header ref={homeSectionRef} onSplineLoad={onSplineLoad}>
-            {/* <Spline
-            scene="https://prod.spline.design/QAO1UmCqGxC3O4oh/scene.splinecode"
-            // className={scss.spline}
-            // onLoadedData={onSplineLoad}
-          /> */}
-          </Header>
+          <Header ref={homeSectionRef} onSplineLoad={onSplineLoad}></Header>
           <Skills ref={skillsSectionRef} />
           <WorksSummary ref={worksSectionRef} />
           <WorksShowcase />
