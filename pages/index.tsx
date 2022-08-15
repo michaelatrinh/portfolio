@@ -3,7 +3,7 @@ import PageHead from "@/components/_head";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 import NavBar from "@/components/navBar";
-import Header from "@/components/homeHeader/index.server";
+import Header from "@/components/homeHeader";
 import Skills from "@/components/homeSkills";
 import WorksSummary from "@/components/worksSummary";
 import WorksShowcase from "@/components/worksShowcase";
@@ -12,7 +12,6 @@ import LottieLoading from "@/components/lottieLoading/index.server.js";
 
 export default function Test(): JSX.Element {
   const [loadedWindow, setLoadedWindow] = useState(false);
-  const [loadedSpline, setLoadedSpline] = useState(false);
 
   const { scroll } = useLocomotiveScroll();
   const homeSectionRef = useRef<HTMLDivElement>(null);
@@ -26,7 +25,8 @@ export default function Test(): JSX.Element {
 
   useEffect(() => {
     const onPageLoad = () => {
-      setLoadedWindow(true);
+      if (loadedWindow === false) setLoadedWindow(true);
+      else null;
     };
 
     if (document.readyState === "complete") {
@@ -40,15 +40,9 @@ export default function Test(): JSX.Element {
   }, []);
 
   const handleNavHomeClick = () => scroll.scrollTo(homeSectionRef.current, 0);
-  const handleNavSkillsClick = () =>
-    scroll.scrollTo(skillsSectionRef.current, 0);
+  const handleNavSkillsClick = () => scroll.scrollTo(skillsSectionRef.current, 0);
   const handleNavWorksClick = () => scroll.scrollTo(worksSectionRef.current, 0);
-  const handleNavContactClick = () =>
-    scroll.scrollTo(contactSectionRef.current, 0);
-
-  function onSplineLoad() {
-    if (loadedSpline === false) setLoadedSpline(true);
-  }
+  const handleNavContactClick = () => scroll.scrollTo(contactSectionRef.current, 0);
 
   return (
     <>
@@ -65,7 +59,7 @@ export default function Test(): JSX.Element {
             navContact={handleNavContactClick}
           />
 
-          <Header ref={homeSectionRef} onSplineLoad={onSplineLoad}></Header>
+          <Header ref={homeSectionRef} />
           <Skills ref={skillsSectionRef} />
           <WorksSummary ref={worksSectionRef} />
           <WorksShowcase />
