@@ -7,6 +7,9 @@ import { MdOutlineSmartphone, MdOutlineComputer } from "react-icons/md";
 import CinemagicScreens from "@/public/cinemagic/cinemagic_monitor_phone.png";
 import ReshareScreens from "@/public/reshare/reshare_phone.png";
 import CleanTableScreens from "@/public/cleantable/cleantable_screens.png";
+import InteractiveFormDemo from "@/public/smallProjects/interactiveForm/screenshot.png";
+import TipCalculatorDemo from "@/public/smallProjects/tipCalculator/screenshot.jpg";
+import AdviceGeneratorDemo from "@/public/smallProjects/adviceGenerator/screenshot.png";
 
 import Cinemagic3DLogo from "@/components/spline/logos/cinemagic/cinemagicLogo.server";
 import Reshare3DLogo from "@/components/spline/logos/reshare/reshareLogo.server";
@@ -15,9 +18,10 @@ import CleanTable3DLogo from "@/components/spline/logos/clean_table/cleanTableLo
 export default function WorksShowcase(): JSX.Element {
   return (
     <React.Fragment>
+      {/* CINEMAGIC SECTION */}
       <section className={scss.worksWrapper} data-scroll-section>
         <div className={scss.contentWrapper}>
-          <div>
+          <div id="cinemagic">
             <div className={scss.leftWrapper}>
               <div className={scss.works_text} data-scroll data-scroll-speed="-2">
                 <h4>
@@ -71,9 +75,10 @@ export default function WorksShowcase(): JSX.Element {
         </div>
       </section>
 
+      {/* RESHARE SECTION */}
       <section className={scss.worksWrapper} data-scroll-section>
         <div className={scss.contentWrapper}>
-          <div>
+          <div id="reshare">
             <div className={scss.leftWrapper}>
               <div className={scss.works_text} data-scroll data-scroll-speed="-2">
                 <h4>
@@ -130,9 +135,10 @@ export default function WorksShowcase(): JSX.Element {
         </div>
       </section>
 
+      {/* CLEAN TABLE SECTION */}
       <section className={scss.worksWrapper} data-scroll-section>
         <div className={scss.contentWrapper}>
-          <div>
+          <div id="cleantable">
             <div className={scss.leftWrapper}>
               <div className={scss.works_text} data-scroll data-scroll-speed="-2">
                 <h4>
@@ -184,10 +190,148 @@ export default function WorksShowcase(): JSX.Element {
                 </p>
               </div>
             </div>
-
-            <div style={{ paddingBottom: "7.5rem" }}></div>
-            <hr className={scss.header_hr} data-scroll-class={scss.header_hr_iv} data-scroll data-scroll-offset="100" />
           </div>
+        </div>
+      </section>
+
+      {/* INTERACTIVE FORM SECTION */}
+      <section className={scss.worksWrapper} data-scroll-section>
+        <div className={scss.contentWrapper}>
+          <div id="interactiveForm" className={scss.smallP_wrapper}>
+            <div className={scss.smallP_wrapper_left}>
+              <div className={scss.works_text}>
+                <h4>
+                  <span className={scss.works_text_number}>04.</span>
+                  &nbsp; Interactive Form
+                  <span className={scss.works_text_responsiveIcons}>
+                    &nbsp; &nbsp; <MdOutlineComputer />
+                  </span>
+                </h4>
+                <p className={scss.works_text_desc}>
+                  An interactive form in which users can see the updates to the UI in real-time as they fill in the
+                  input boxes.
+                </p>
+                <p
+                  className={scss.works_text_github}
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/michaelatrinh/interactive-card-details-form",
+                      "_blank",
+                      "noopener noreferrer"
+                    )
+                  }
+                >
+                  <BsFillArrowRightSquareFill /> &nbsp; View GitHub Repository
+                </p>
+              </div>
+            </div>
+            <div className={scss.smallP_wrapper_middle}>
+              <div className={scss.works_text}>
+                <h4>Built With:</h4>
+                <ul>
+                  <li>React.js</li>
+                  <li>TypeScript</li>
+                  <li>SASS / SCSS</li>
+                </ul>
+              </div>
+            </div>
+            <div className={scss.smallP_wrapper_right}>
+              <Image src={InteractiveFormDemo} alt="Interactive Form App Demo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TIP CALCULATOR SECTION */}
+      <section className={scss.worksWrapper} data-scroll-section>
+        <div className={scss.contentWrapper}>
+          <div id="tipCalculator" className={scss.smallP_wrapper}>
+            <div className={scss.smallP_wrapper_left}>
+              <div className={scss.works_text}>
+                <h4>
+                  <span className={scss.works_text_number}>05.</span>
+                  &nbsp; Tip Calculator
+                  <span className={scss.works_text_responsiveIcons}>
+                    &nbsp; &nbsp; <MdOutlineComputer />
+                  </span>
+                </h4>
+                <p className={scss.works_text_desc}>A nice and simple tip calculator!</p>
+                <p
+                  className={scss.works_text_github}
+                  onClick={() =>
+                    window.open("https://github.com/michaelatrinh/tip-calculator-app", "_blank", "noopener noreferrer")
+                  }
+                >
+                  <BsFillArrowRightSquareFill /> &nbsp; View GitHub Repository
+                </p>
+              </div>
+            </div>
+            <div className={scss.smallP_wrapper_middle}>
+              <div className={scss.works_text}>
+                <h4>Built With:</h4>
+                <ul>
+                  <li>AngularJS</li>
+                  <li>TypeScript</li>
+                  <li>HTML</li>
+                  <li>SASS / SCSS</li>
+                </ul>
+              </div>
+            </div>
+            <div className={scss.smallP_wrapper_right}>
+              <Image src={TipCalculatorDemo} alt="Tip Calculator App Demo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ADVICE GENERATOR SECTION */}
+      <section className={scss.worksWrapper} data-scroll-section>
+        <div className={scss.contentWrapper}>
+          <div id="adviceGenerator" className={scss.smallP_wrapper}>
+            <div className={scss.smallP_wrapper_left}>
+              <div className={scss.works_text}>
+                <h4>
+                  <span className={scss.works_text_number}>06.</span>
+                  &nbsp; Advice Generator
+                  <span className={scss.works_text_responsiveIcons}>
+                    &nbsp; &nbsp; <MdOutlineComputer />
+                  </span>
+                </h4>
+                <p className={scss.works_text_desc}>
+                  An app that allows users to click and generate a random advice snippet.
+                </p>
+                <p
+                  className={scss.works_text_github}
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/michaelatrinh/advice-generator-app",
+                      "_blank",
+                      "noopener noreferrer"
+                    )
+                  }
+                >
+                  <BsFillArrowRightSquareFill /> &nbsp; View GitHub Repository
+                </p>
+              </div>
+            </div>
+            <div className={scss.smallP_wrapper_middle}>
+              <div className={scss.works_text}>
+                <h4>Built With:</h4>
+                <ul>
+                  <li>React.js</li>
+                  <li>JavaScript</li>
+                  <li>REST API</li>
+                  <li>SASS / SCSS</li>
+                </ul>
+              </div>
+            </div>
+            <div className={scss.smallP_wrapper_right}>
+              <Image src={AdviceGeneratorDemo} alt="Advice Generator App Demo" />
+            </div>
+          </div>
+
+          <div style={{ paddingBottom: "7.5rem" }}></div>
+          <hr className={scss.header_hr} data-scroll-class={scss.header_hr_iv} data-scroll data-scroll-offset="100" />
         </div>
       </section>
     </React.Fragment>

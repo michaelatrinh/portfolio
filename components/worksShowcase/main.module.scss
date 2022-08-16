@@ -196,3 +196,126 @@
   width: 100% !important;
   height: 100% !important;
 }
+
+.smallP_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_left {
+    display: flex;
+    flex-grow: 1;
+    max-width: 33%;
+
+    .works_text {
+      h4 {
+        font: 400 3rem /2 $primary-font;
+        color: $content-egg-colour;
+        margin: 0;
+
+        @include screen-2xl {
+          font-size: 3rem;
+        }
+
+        @include screen-xl {
+          font-size: 2.5rem;
+        }
+      }
+
+      &_number {
+        font: 300 1.5rem /2 $primary-font;
+        color: $content-egg-colour;
+        margin: 0;
+      }
+
+      &_responsiveIcons {
+        font-size: 1.5vw;
+        color: $content-light-colour;
+      }
+
+      &_desc {
+        font: 300 1.33rem /1.33 $primary-font;
+        color: $content-egg-colour;
+
+        @include screen-2xl {
+          font-size: 1.25rem;
+        }
+
+        @include screen-xl {
+          font-size: 1.25rem;
+        }
+      }
+
+      &_github {
+        display: inline-block;
+        font: 300 1.5rem /3 $primary-font;
+        color: $content-egg-colour;
+        margin: 0;
+
+        @include screen-2xl {
+          font: 300 1.33rem /1.33 $primary-font;
+        }
+
+        @include screen-xl {
+          font-size: 1.25rem;
+          line-height: 2;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          border-bottom: 1px solid $content-egg-colour;
+        }
+      }
+    }
+  }
+
+  &_middle {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 33%;
+
+    .works_text {
+      h4 {
+        font: 400 2.5rem /2 $primary-font;
+        color: $content-egg-colour;
+        margin: 0;
+
+        @include screen-2xl {
+          font-size: 2.25rem;
+          line-height: 1;
+        }
+
+        @include screen-xl {
+          font-size: 2.25rem;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          font: 300 1.4rem /1.5 $primary-font;
+          color: $content-egg-colour;
+          margin: 0;
+
+          @include screen-2xl {
+            font-size: 1.25rem;
+          }
+
+          @include screen-xl {
+            font-size: 1.33rem;
+          }
+        }
+      }
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-grow: 1;
+    max-width: 33%;
+  }
+}
