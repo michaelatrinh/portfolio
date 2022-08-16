@@ -26,7 +26,6 @@
       &_text {
         padding-top: 15vw;
         padding-left: 5rem;
-        // padding-left: 33vw;
 
         @include screen-2xl {
           padding-top: 12.5vw;
@@ -83,6 +82,10 @@
       &_resharePhone {
         width: 100%;
         height: 50%;
+      }
+
+      &_screens {
+        padding-left: 5rem;
       }
     }
   }
@@ -161,11 +164,6 @@
           height: auto;
         }
       }
-
-      // &_logo {
-      //   width: 100%;
-      //   height: auto;
-      // }
     }
   }
 }
@@ -194,7 +192,7 @@
   }
 }
 
-.spline_cinemagicLogo {
+.spline_logo {
   width: 100% !important;
   height: 100% !important;
 }
