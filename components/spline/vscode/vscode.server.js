@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import scss from "../spline/vscode.module.scss";
+import scss from "../vscode/vscode.module.scss";
 import Spline from "@splinetool/react-spline";
 
 function VSCode3D() {
