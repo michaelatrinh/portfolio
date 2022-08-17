@@ -61,6 +61,17 @@ const Skills = forwardRef<HTMLElement>((props, ref) => (
                 React.js
               </span>
             </li>
+            <li>
+              <span
+                className={scss.li_sub}
+                data-scroll-class={scss.li_sub_iv}
+                data-scroll
+                data-scroll-repeat={true}
+                data-scroll-offset="45%, 55%"
+              >
+                AngularJS
+              </span>
+            </li>
           </ul>
         </details>
 
@@ -173,12 +184,7 @@ const Skills = forwardRef<HTMLElement>((props, ref) => (
         </details>
 
         <div className={scss.spacingDiv}></div>
-        <hr
-          className={scss.header_hr}
-          data-scroll-class={scss.header_hr_iv}
-          data-scroll
-          data-scroll-offset="100"
-        />
+        <hr className={scss.header_hr} data-scroll-class={scss.header_hr_iv} data-scroll data-scroll-offset="100" />
       </div>
     </div>
   </section>

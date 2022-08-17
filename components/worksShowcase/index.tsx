@@ -45,7 +45,7 @@ export default function WorksShowcase(): JSX.Element {
             </div>
           </div>
 
-          <div>
+          <div className={scss.div_spacer}>
             <div className={scss.leftWrapper}>
               <div className={scss.works_screens} data-scroll data-scroll-speed="2">
                 <Image src={CinemagicScreens} alt="Cinemagic App Demo" />
@@ -101,7 +101,7 @@ export default function WorksShowcase(): JSX.Element {
             </div>
           </div>
 
-          <div>
+          <div className={scss.div_spacer}>
             <div className={scss.leftWrapper}>
               <div className={scss.works_screens} data-scroll data-scroll-speed="2">
                 <Image src={ReshareScreens} alt="Reshare App Demo" />
@@ -162,7 +162,7 @@ export default function WorksShowcase(): JSX.Element {
             </div>
           </div>
 
-          <div style={{ position: "relative" }}>
+          <div className={scss.div_spacer}>
             <div className={scss.leftWrapper}>
               <div className={scss.works_screens} data-scroll data-scroll-speed="2">
                 <Image src={CleanTableScreens} alt="Clean Table App Demo" />
