@@ -269,7 +269,7 @@
 
     .works_text {
       h4 {
-        font: 400 3rem /1 $primary-font;
+        font: 400 3rem /2 $primary-font;
         color: $content-egg-colour;
         margin: 0;
 
@@ -283,16 +283,18 @@
 
         @include screen-sm {
           font-size: 0.6rem;
+          line-height: 1;
         }
       }
 
       &_number {
-        font: 300 1.5rem /1 $primary-font;
+        font: 300 1.5rem /2 $primary-font;
         color: $content-egg-colour;
         margin: 0;
 
         @include screen-sm {
           font-size: 0.5rem;
+          line-height: 1;
         }
       }
 
