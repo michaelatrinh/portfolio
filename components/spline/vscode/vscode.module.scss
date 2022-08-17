@@ -6,6 +6,42 @@
 @import "@/styles/partials.scss";
 @import "@/styles/mixins.scss";
 
+.absWrapper {
+  @include screen-sm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.wrapper {
+  height: 100vh;
+
+  position: relative;
+
+  @include screen-2xl {
+    transform: scale(0.8);
+  }
+
+  @include screen-xl {
+    transform: scale(0.75);
+  }
+
+  @include screen-lg {
+    transform: scale(0.6);
+  }
+
+  @include screen-md {
+    transform: scale(0.5);
+  }
+
+  @include screen-sm {
+    transform: scale(0.25);
+  }
+}
+
 .spline {
   position: absolute;
   top: 50%;

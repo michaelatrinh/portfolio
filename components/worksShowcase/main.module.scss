@@ -8,6 +8,12 @@
 
 .contentWrapper {
   padding: 0 3rem;
+
+  .div_spacer {
+    @include screen-sm {
+      margin-top: 2.5rem;
+    }
+  }
 }
 
 .worksWrapper {
@@ -16,11 +22,21 @@
   margin-bottom: 5rem;
   position: relative;
 
+  @include screen-sm {
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
   .leftWrapper {
     display: inline-block;
     vertical-align: top;
     width: 40%;
     padding-right: 3.75rem;
+
+    @include screen-sm {
+      width: 50%;
+      padding-right: 0;
+    }
 
     .works {
       &_text {
@@ -35,6 +51,11 @@
           padding-top: 11vw;
         }
 
+        @include screen-sm {
+          padding-top: 0;
+          padding-left: 1rem;
+        }
+
         h4 {
           font: 400 4rem /2 $primary-font;
           color: $content-egg-colour;
@@ -47,12 +68,20 @@
           @include screen-xl {
             font-size: 2.5rem;
           }
+
+          @include screen-sm {
+            font-size: 1.1rem;
+          }
         }
 
         &_number {
           font: 300 1.5rem /2 $primary-font;
           color: $content-egg-colour;
           margin: 0;
+
+          @include screen-sm {
+            font-size: 0.5rem;
+          }
         }
 
         &_responsiveIcons {
@@ -71,6 +100,10 @@
           @include screen-xl {
             font-size: 1.25rem;
           }
+
+          @include screen-sm {
+            font-size: 0.66rem;
+          }
         }
       }
 
@@ -86,6 +119,10 @@
 
       &_screens {
         padding-left: 5rem;
+
+        @include screen-sm {
+          padding-left: 1rem;
+        }
       }
     }
   }
@@ -96,9 +133,18 @@
     width: 60%;
     padding-left: 3.75rem;
 
+    @include screen-sm {
+      width: 50%;
+      padding-left: 0;
+    }
+
     .works {
       &_text {
         padding-left: 5rem;
+
+        @include screen-sm {
+          padding-left: 2rem;
+        }
 
         h4 {
           font: 400 3.1rem /2 $primary-font;
@@ -113,10 +159,18 @@
           @include screen-xl {
             font-size: 2.25rem;
           }
+
+          @include screen-sm {
+            font-size: 1.1rem;
+          }
         }
 
         ul {
           list-style-type: none;
+
+          @include screen-sm {
+            padding-left: 0;
+          }
 
           li {
             font: 300 1.4rem /1.5 $primary-font;
@@ -130,6 +184,10 @@
             @include screen-xl {
               font-size: 1.33rem;
             }
+
+            @include screen-sm {
+              font-size: 0.66rem;
+            }
           }
         }
 
@@ -138,6 +196,12 @@
           font: 300 1.5rem /3 $primary-font;
           color: $content-egg-colour;
           margin: 0;
+
+          &:hover {
+            cursor: pointer;
+
+            border-bottom: 1px solid $content-egg-colour;
+          }
 
           @include screen-2xl {
             font: 300 1.33rem /1.33 $primary-font;
@@ -148,17 +212,13 @@
             line-height: 2;
           }
 
-          &:hover {
-            cursor: pointer;
-
-            border-bottom: 1px solid $content-egg-colour;
+          @include screen-sm {
+            font-size: 0.6rem;
           }
         }
       }
 
       &_logoWrapper {
-        // padding-right: 5rem;
-
         &_logo {
           width: 100%;
           height: auto;
@@ -209,23 +269,31 @@
 
     .works_text {
       h4 {
-        font: 400 3rem /2 $primary-font;
+        font: 400 3rem /1 $primary-font;
         color: $content-egg-colour;
         margin: 0;
 
         @include screen-2xl {
-          font-size: 3rem;
+          font-size: 2.33rem;
         }
 
         @include screen-xl {
-          font-size: 2.5rem;
+          font-size: 2rem;
+        }
+
+        @include screen-sm {
+          font-size: 0.6rem;
         }
       }
 
       &_number {
-        font: 300 1.5rem /2 $primary-font;
+        font: 300 1.5rem /1 $primary-font;
         color: $content-egg-colour;
         margin: 0;
+
+        @include screen-sm {
+          font-size: 0.5rem;
+        }
       }
 
       &_responsiveIcons {
@@ -244,6 +312,11 @@
         @include screen-xl {
           font-size: 1.25rem;
         }
+
+        @include screen-sm {
+          font-size: 0.55rem;
+          margin-bottom: 0;
+        }
       }
 
       &_github {
@@ -251,6 +324,12 @@
         font: 300 1.5rem /3 $primary-font;
         color: $content-egg-colour;
         margin: 0;
+
+        &:hover {
+          cursor: pointer;
+
+          border-bottom: 1px solid $content-egg-colour;
+        }
 
         @include screen-2xl {
           font: 300 1.33rem /1.33 $primary-font;
@@ -261,10 +340,9 @@
           line-height: 2;
         }
 
-        &:hover {
-          cursor: pointer;
-
-          border-bottom: 1px solid $content-egg-colour;
+        @include screen-sm {
+          font-size: 0.5rem;
+          line-height: 0;
         }
       }
     }
@@ -288,13 +366,22 @@
         }
 
         @include screen-xl {
-          font-size: 2.25rem;
+          font-size: 2rem;
+        }
+
+        @include screen-sm {
+          font-size: 0.66rem;
         }
       }
 
       ul {
         list-style-type: none;
         padding: 0;
+
+        @include screen-sm {
+          margin: 0;
+          margin-top: 0.5rem;
+        }
 
         li {
           font: 300 1.4rem /1.5 $primary-font;
@@ -307,6 +394,10 @@
 
           @include screen-xl {
             font-size: 1.33rem;
+          }
+
+          @include screen-sm {
+            font-size: 0.55rem;
           }
         }
       }

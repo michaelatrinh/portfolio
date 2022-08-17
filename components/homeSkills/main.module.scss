@@ -42,10 +42,6 @@
     }
   }
 
-  // summary:hover {
-  //   cursor: pointer;
-  // }
-
   .li {
     &_title {
       font: 300 5vw /1.66 $primary-font;
@@ -58,6 +54,10 @@
 
       &_iv {
         opacity: 1;
+      }
+
+      @include screen-sm {
+        font-size: 1rem;
       }
     }
 

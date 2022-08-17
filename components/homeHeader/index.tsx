@@ -1,11 +1,7 @@
-import React, { forwardRef, Suspense } from "react";
+import React, { forwardRef } from "react";
 import scss from "@/components/homeHeader/main.module.scss";
-import dynamic from "next/dynamic";
 
 import VSCode3DModel from "../spline/vscode/vscode.server";
-// const VSCode3DModel = dynamic(() => import("../spline/vscode.server"), {
-//   suspense: true
-// });
 
 interface Props {
   children?: React.ReactNode;
