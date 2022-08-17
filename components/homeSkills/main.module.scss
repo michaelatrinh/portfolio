@@ -71,6 +71,10 @@
       transition-property: opacity;
       transition-duration: 500ms;
 
+      @include screen-sm {
+        padding-left: 0;
+      }
+
       &_iv {
         opacity: 1;
       }
@@ -83,6 +87,10 @@
 
   @include screen-xl {
     padding-top: 5rem;
+  }
+
+  @include screen-sm {
+    padding-top: 3rem;
   }
 }
 
