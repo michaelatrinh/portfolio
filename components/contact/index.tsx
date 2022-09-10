@@ -1,19 +1,16 @@
-import React, { forwardRef } from 'react';
-import scss from '@/components/contact/main.module.scss';
+import React, { forwardRef } from "react";
+import scss from "@/components/contact/main.module.scss";
+import Image from "next/image";
+import LinkedInIcon from "@/public/socialsIcons/icons8-linkedin.svg";
+import GitHubIcon from "@/public/socialsIcons/icons8-github.svg";
+import EMailIcon from "@/public/socialsIcons/icons8-mail.svg";
 
 const Contact = forwardRef<HTMLElement>((props, ref) => (
-  <section 
-    className={scss.contactWrapper} 
-    ref={ref}
-    data-scroll-section
-  >
+  <section className={scss.contactWrapper} ref={ref} data-scroll-section>
     <div className={scss.contentWrapper}>
       <div className={scss.leftWrapper}>
         <h2>
-          <span
-            data-scroll-class={scss.footer_line}
-            data-scroll
-          >
+          <span data-scroll-class={scss.footer_line} data-scroll>
             <span>Consider Reaching Out To Me!</span>
           </span>
         </h2>
@@ -22,26 +19,26 @@ const Contact = forwardRef<HTMLElement>((props, ref) => (
         <div className={scss.rightWrapper_socialWrapper}>
           <ul>
             <li>
-              <img 
-                src='/socialsIcons/icons8-linkedin.svg' 
-                alt='LinkedIn' 
-                className={scss.socialIcons} 
-                onClick={() => window.open("https://www.linkedin.com/in/michaelatrinh/", '_blank')}  
+              <Image
+                src={LinkedInIcon}
+                alt="LinkedIn"
+                layout="fill"
+                onClick={() => window.open("https://www.linkedin.com/in/michaelatrinh/", "_blank")}
               />
             </li>
             <li>
-              <img 
-                src='/socialsIcons/icons8-github.svg' 
-                alt='GitHub' 
-                className={scss.socialIcons} 
-                onClick={() => window.open("https://github.com/michaelatrinh", '_blank', 'noopener noreferrer')}
+              <Image
+                src={GitHubIcon}
+                alt="GitHub"
+                layout="fill"
+                onClick={() => window.open("https://github.com/michaelatrinh/", "_blank")}
               />
             </li>
             <li>
-              <img 
-                src='/socialsIcons/icons8-mail.svg' 
-                alt='eMail' 
-                className={scss.socialIcons} 
+              <Image
+                src={EMailIcon}
+                alt="Email"
+                layout="fill"
                 onClick={(e) => {
                   window.location.href = "mailto:trinh.michael98@gmail.com";
                   e.preventDefault();
