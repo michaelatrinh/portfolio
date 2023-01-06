@@ -21,7 +21,10 @@ function Project(props: ProjectProps) {
       <div id={props.id}>
         <div className={scss.leftWrapper}>
           <div className={scss.works_text} data-scroll data-scroll-speed="-2">
-            <h4>
+            <h4
+              className={scss.works_title}
+              onClick={() => window.open(props.githubLink, "_blank", "noopener noreferrer")}
+            >
               <span className={scss.works_text_number}>{props.orderNo}</span>
               &nbsp; {props.name}
               <span className={scss.works_text_responsiveIcons}>&nbsp; &nbsp; {props.deviceIcons}</span>
