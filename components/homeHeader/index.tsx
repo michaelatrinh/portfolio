@@ -31,7 +31,7 @@ const Header = forwardRef<HTMLDivElement, Props>(({ children, ...otherProps }, r
             data-scroll-speed="2"
             data-scroll-position="top"
           >
-            <span className={scss.header_title_line2_text}>front &nbsp;</span>
+            <span className={scss.header_title_line2_text}>Web &nbsp;</span>
           </span>
           <span
             className={scss.header_title_line2}
@@ -40,17 +40,17 @@ const Header = forwardRef<HTMLDivElement, Props>(({ children, ...otherProps }, r
             data-scroll-speed="2.5"
             data-scroll-position="top"
           >
-            <span className={scss.header_title_line2_text}>end &nbsp;</span>
+            <span className={scss.header_title_line2_text}>Developer &nbsp;</span>
           </span>
-          <span
+          {/* <span
             className={scss.header_title_line2}
             data-scroll-class={scss.header_title_line2_iv}
             data-scroll
             data-scroll-speed="3"
             data-scroll-position="top"
           >
-            <span className={scss.header_title_line2_text}>developer</span>
-          </span>
+            <span className={scss.header_title_line2_text}>Developer</span>
+          </span> */}
         </h1>
         <hr className={scss.header_hr} data-scroll-class={scss.header_hr_iv} data-scroll data-scroll-offset="100" />
       </header>
