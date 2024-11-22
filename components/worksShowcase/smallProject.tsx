@@ -20,7 +20,10 @@ function SmallProject(props: smallProjectProps) {
       <div id={props.id} className={scss.smallP_wrapper}>
         <div className={scss.smallP_wrapper_left}>
           <div className={scss.works_text}>
-            <h4>
+            <h4
+              className={scss.works_title}
+              onClick={() => window.open(props.githubLink, "_blank", "noopener noreferrer")}
+            >
               <span className={scss.works_text_number}>{props.orderNo}</span>
               &nbsp; {props.name}
               <span className={scss.works_text_responsiveIcons}>&nbsp; &nbsp; {props.deviceIcons}</span>

@@ -39,6 +39,12 @@
     }
 
     .works {
+      &_title {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
       &_text {
         padding-top: 15vw;
         padding-left: 5rem;
@@ -346,6 +352,12 @@
           font-size: 0.4rem;
           line-height: 0;
         }
+      }
+    }
+
+    .works_title {
+      &:hover {
+        cursor: pointer;
       }
     }
   }
